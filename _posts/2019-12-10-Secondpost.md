@@ -19,6 +19,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
   <p>
   
   ### HTML
+  
   <br>
   (HyperText Markup Language)<br>
   웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언어<br>
@@ -29,6 +30,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
   <p>
   
   ### CSS
+  
   <br>
   (Cascading Style Sheets)<br>
   어떤 스타일로 요소가 표시 되는지를 정하는 규격<br>
@@ -39,6 +41,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
    <p>
    
   ### Javascript
+  
   <br>
   자바스크립트(JavaScript)는 객체(object) 기반의 스크립트 언어<br>
   주로 웹 브라우저에서 사용되나, Node.js와 같은 프레임워크를 사용하면 서버 측 프로그래밍에서도 사용할 수 있습니다.<br>
