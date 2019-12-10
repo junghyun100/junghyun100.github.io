@@ -19,7 +19,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
 
   <p>
   
-  ### HTML
+  #### HTML
   
   <br>
   (HyperText Markup Language)<br>
@@ -30,7 +30,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
   </p>
   <p>
   
-  ### CSS
+  #### CSS
   
   <br>
   (Cascading Style Sheets)<br>
@@ -41,7 +41,7 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
    </p>
    <p>
    
-  ### Javascript
+  #### Javascript
   
   <br>
   자바스크립트(JavaScript)는 객체(object) 기반의 스크립트 언어<br>
