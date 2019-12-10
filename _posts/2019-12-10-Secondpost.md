@@ -14,9 +14,10 @@ comments: true
 그 중에서 <strong>컴퓨터 언어</strong>라고 합니다.
 
 HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다.
-### 3-1. 이미지 가운데 정렬
----   
 
+
+---   
+### 3-1. 이미지 가운데 정렬
 <p>
   
 ### HTML
