@@ -14,9 +14,6 @@ comments: true
 --- 
 
 ## html, css, javascript는 사이트를 만들때 사용되는 프로그래밍 언어입니다.
-  <p>
   ### HTML
   (HyperText Markup Language)
-  웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언어
-  
-  </p>
+  웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언
