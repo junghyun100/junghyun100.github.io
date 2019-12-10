@@ -15,7 +15,7 @@ comments: true
 
 --- 
 
-## HTML, CSS, Javascript는 사이트를 만들때 사용되는 프로그래밍 언어
+# HTML, CSS, Javascript는 사이트를 만들때 사용되는 프로그래밍 언어
   
   <p>
   
