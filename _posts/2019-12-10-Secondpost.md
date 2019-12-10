@@ -13,6 +13,8 @@ comments: true
 약속이라는 의미에서 <strong><u>언어</u></strong> <br>
 그 중에서 <strong>컴퓨터 언어</strong>라고 합니다.
 
+HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다.
+
 ---   
   <p>
   
