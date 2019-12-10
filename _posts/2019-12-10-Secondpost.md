@@ -18,14 +18,14 @@ comments: true
 ## html, css, javascript는 사이트를 만들때 사용되는 프로그래밍 언어
   <p>
   
-  ### HTML
+  ### HTML 
   (HyperText Markup Language)
   웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언어
   구조를 세우는 역할로 사이트의 구성물로 채워집니다.
   건물을 예시로 들었을 때 철골과 같은 뼈대를 세우는 과정입니다.
   </p>
   
-  ### CSS
+  ### CSS 
   (Cascading Style Sheets)
   어떤 스타일로 요소가 표시 되는지를 정하는 규격
   html로 세운 구조에 디자인을 입히는 단계입니다.
