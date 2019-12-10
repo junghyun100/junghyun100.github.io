@@ -20,18 +20,17 @@ HTML, CSS, Javascript의 개념에 대해서 포스팅 하도록 하겠습니다
 ### HTML
 <p>
   
-<br>
 (HyperText Markup Language)<br>
 웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언어<br>
 구조를 세우는 역할로 사이트의 구성물로 채워집니다.<br>
 건물을 예시 : 철골과 같은 뼈대를 세우는 과정<br>
   
 </p>
-<p>
-  
+
 ### CSS
-  
-<br>
+
+<p>
+ 
 (Cascading Style Sheets)<br>
 어떤 스타일로 요소가 표시 되는지를 정하는 규격<br>
 html로 세운 구조에 디자인을 입히는 단계입니다.<br>
