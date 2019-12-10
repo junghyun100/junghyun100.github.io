@@ -16,9 +16,12 @@ comments: true
 --- 
 
 ## HTML, CSS, Javascript는 사이트를 만들때 사용되는 프로그래밍 언어
-  ### HTML
+  
   <p>
   
+  ## HTML
+  
+  <br>
   (HyperText Markup Language)<br>
   웹브라우저를 통해 사용자(이용자에게 보이는 웹 문서를 작성하기 위한 언어<br>
   구조를 세우는 역할로 사이트의 구성물로 채워집니다.<br>
@@ -26,7 +29,7 @@ comments: true
 
    <p>
   
-### CSS
+## CSS
   
   <br>
   (Cascading Style Sheets)<br>
@@ -37,7 +40,7 @@ comments: true
    </p>
     <p>
     
-### Javascript
+## Javascript
 
   <br>
   자바스크립트(JavaScript)는 객체(object) 기반의 스크립트 언어<br>
