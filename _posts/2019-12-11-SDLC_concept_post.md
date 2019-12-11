@@ -82,7 +82,7 @@ comments: true
 
 <p>
 
-아무런 계획이 없는 개발과 계획이 지나친게 많은 개발<br>
+아무 계획이 없는 개발과 계획이 지나친게 많은 개발<br>
 그 방법들 사이에서 <strong>타협점을 찾고자 하는 방법론</strong><br>
 <br>
 <strong>Document oriented(문서를 통한 개발)</strong>가 아니라,<br>
