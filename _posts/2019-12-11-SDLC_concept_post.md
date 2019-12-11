@@ -8,7 +8,6 @@ comments: true
 
 ## 소프트웨어 개발 생명주기 프로세스 모델 
 
-<br>
 (SDLC :Software Development LifeCycle) <br>
 소프트웨어의 생성부터 소멸까지 관리하는 프로세스
 
