@@ -6,13 +6,17 @@ comments: true
 ---
 
 
-## 소프트웨어 개발 생명주기 프로세스 모델 <br>
+## 소프트웨어 개발 생명주기 프로세스 모델 
+
+<br>
 (SDLC :Software Development LifeCycle) <br>
 소프트웨어의 생성부터 소멸까지 관리하는 프로세스
 
 <p>
 
-### Waterfall Model (폭포수 모델) <br>
+### Waterfall Model (폭포수 모델) 
+
+<br>
 
 대부분의 개발 프로세스에서 <strong>가장 많이 사용되고 있는 모델</strong><br>
 요구사항 - 설계 - 구현 - 테스팅 - 유지보수 의 순서<br>
