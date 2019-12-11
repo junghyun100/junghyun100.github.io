@@ -77,4 +77,17 @@ comments: true
 </ul>
 
 </p>
+
+### Agile Model (애자일 모델) 
+
+<p>
+
+아무런 계획이 없는 개발과 계획이 지나친게 많은 개발<br>
+그 방법들 사이에서 <strong>타협점을 찾고자 하는 방법론</strong><br>
+<br>
+<strong>Document oriented(문서를 통한 개발)</strong>가 아니라,<br>
+<strong>Code oriented(실질적인 코딩)</strong>을 통한 방법론<br>
+
+</p>
+
 ---
