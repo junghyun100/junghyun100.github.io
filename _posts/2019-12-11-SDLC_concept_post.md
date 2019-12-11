@@ -15,6 +15,7 @@ comments: true
 ### Waterfall Model (폭포수 모델) 
 
 <p>
+
 대부분의 개발 프로세스에서 <strong>가장 많이 사용되고 있는 모델</strong><br>
 요구사항 - 설계 - 구현 - 테스팅 - 유지보수 의 순서<br>
 * 장점:<br>
