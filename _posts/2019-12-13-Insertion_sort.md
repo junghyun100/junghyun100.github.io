@@ -21,6 +21,8 @@ comments: true
 # include <stdio.h>
 # define MAX_SIZE 5
 
+void insertion_sort(int array[], int n);
+
 void main(){
   int i;
   int n = MAX_SIZE;
