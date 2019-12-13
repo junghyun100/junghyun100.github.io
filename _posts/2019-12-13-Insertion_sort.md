@@ -4,6 +4,7 @@ title: "Insertion Sorting에 관해"
 tags: [알고리즘]
 comments: true
 ---
+
 ## Insertion Sorting(삽입 정렬)
 자료 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여,<br>
 자신의 위치를 찾아 삽입하는 정렬 알고리즘<br>
@@ -18,6 +19,7 @@ comments: true
 ---
 
 ```c
+
 # include <stdio.h>
 # define MAX_SIZE 5
 
