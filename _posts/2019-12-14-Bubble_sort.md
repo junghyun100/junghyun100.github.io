@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Bubble Sorting에 관해"
 tags: [알고리즘]
