@@ -3,6 +3,7 @@ layout: post
 title: "Bubble Sorting에 관해"
 tags: [알고리즘]
 comments: true
+
 ---
 
 ## Bubble Sorting(거품 정렬)
