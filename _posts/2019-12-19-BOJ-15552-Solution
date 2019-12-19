@@ -1,0 +1,52 @@
+---
+layout: post
+title: "BufferedReader,BufferedWriter예시"
+tags: [알고리즘]
+comments: true
+
+---
+
+## BufferedReader 와 BufferedWriter에 관하여
+위에 있는 2가지는 이름에서 볼 수 있듯이 버퍼를 이용해서 읽고 쓸 수 있게 한다.<br>
+버퍼를 거치지만, 하드를 통해 입력하는 것보다 훨씬 빠르게 된다.<br>
+그에 대한 이유는 일반적으로 하드의 속도가 엄청 느리기 때문<br>
+
+### ex)다른 곳에 물을 퍼나르기로 가정한다 했을 때,<br>
+Buffer를 사용하지 않은 경우 = 손이나 입으로 퍼나르기<br> 
+Buffer를 사용하는 경우 = 도구를 이용해 한번에 퍼나르기<br>
+
+---
+
+```Java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int t=Integer.parseInt(br.readLine()); //BufferedReader의 readLine을 사용하면
+						       //읽어드리는 값이 String이기 때문에 parseInt로 형변환이 필요
+		for(int i=0;i<t;i++)
+		{
+          	  String [] word = br.readLine().split(" "); //split으로 " "=공백 을 거르고 저장
+          	  bw.write((Integer.parseInt(word[0])+Integer.parseInt(word[1])) + "\n");	
+		}
+		bw.flush(); // 입력된 모든값을 출력하게 해줌
+		br.close();
+		bw.close();
+	}
+}
+
+
+
+
+```
+
+---
