@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing for Post and Recording"
-tags: [샘플 포스트, 기록, Github Blog]
+tags: [기록]
 comments: true
 ---
 깃허브로 블로그를 처음 만들어 보았습니다.<br>
