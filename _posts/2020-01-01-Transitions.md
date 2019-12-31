@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "css 응용 정리"
+title: "css 기초 정리(3)"
 tags: [css]
 comments: true
 ---
@@ -9,7 +9,7 @@ comments: true
 
 ---
 
-## css 응용 정리
+## css 기초 정리(3)
 ###  Transition
 
 Transitions는 무엇인가?<br>
