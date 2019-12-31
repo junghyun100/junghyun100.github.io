@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "응용 css 정리"
+title: "css 응용 정리"
 tags: [css]
 comments: true
 ---
@@ -9,7 +9,7 @@ comments: true
 
 ---
 
-## 응용 css 정리
+## css 응용 정리
 ###  Transition
 
 Transitions는 무엇인가?<br>
@@ -56,6 +56,7 @@ state들은 hover, active, focus, visited가 있음.<br>
 <li>focus : 요소에 커서 위치해 선택된 동안의 스타일 지정.<br>
 <li>visited : 방문한 경우 요소의 속성을 스타일 지정.<br>
 </li>
+ 
 </ul>
 
 ---
