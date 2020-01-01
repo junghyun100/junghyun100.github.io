@@ -51,12 +51,10 @@ Transitions -이동/변경- 을 멋지게 보여주는 효과<br>
 Transitions이란 이렇게 어떤 state가 바뀔때 적용이 됨.<br>
 state들은 hover, active, focus, visited가 있음.<br>
 <ul>
-<li>hover : 요소 위에  마우스 커서 올려놓을 때 스타일 지정.<br>
-<li>active : 요소를  마우스로 클릭하는 순간의 스타일 지정.<br>
-<li>focus : 요소에 커서 위치해 선택된 동안의 스타일 지정.<br>
-<li>visited : 방문한 경우 요소의 속성을 스타일 지정.<br>
-</li>
- 
+<li>hover : 요소 위에  마우스 커서 올려놓을 때 스타일 지정.</li>
+<li>active : 요소를  마우스로 클릭하는 순간의 스타일 지정.</li>
+<li>focus : 요소에 커서 위치해 선택된 동안의 스타일 지정.</li>
+<li>visited : 방문한 경우 요소의 속성을 스타일 지정.</li>
 </ul>
 
 ---
