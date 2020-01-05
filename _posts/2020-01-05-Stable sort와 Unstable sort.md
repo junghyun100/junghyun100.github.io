@@ -36,6 +36,6 @@ Stable sort와 Unstable sort의 결과값은 다르게 나타난다.
 <br>
 간단히 정리해서, 알고리즘 중에서는 <strong>퀵과 선택</strong>이 불안정정렬이고 나머지는 안정 정렬입니다.<br>
 </p>
-참고: <a hef="https://godgod732.tistory.com/10">https://godgod732.tistory.com/10</a> [졸지말고..]
+참고: <a href="https://godgod732.tistory.com/10">https://godgod732.tistory.com/10</a> [졸지말고..]
 
 ---
