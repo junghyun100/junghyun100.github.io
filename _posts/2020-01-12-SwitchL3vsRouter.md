@@ -1,9 +1,9 @@
-
 ---
 layout: post
 title: "L3 Switch vs Router의 차이점"
 tags: [Network]
 comments: true
+
 ---
 
 이번 포스팅에서는 L3 Switch vs Router의 차이점을 간단히 정리했습니다..
