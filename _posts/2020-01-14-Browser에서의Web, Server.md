@@ -66,4 +66,15 @@ WAS (web application server) (컨테이너, 웹 컨테이너, 서블릿 컨테�
 
 웹 크롤러는 웹 로봇, 웹 스파이더 등으로 다양하게 불리며 특정 형태의 정보(스팸을 위한 이메일 수집)를 수집하는데도 사용됩니다. 
 
+#### 추가++
+톰캣은 버전마다 JSP Spec, EL Spec, Servlet Spec, JASPIC Spec, Supported Java versions이 다르다.
+
+궁금해서 찾아본 참고자료)
+- Servlet: 자바를 사용하여 웹페이지를 동적으로 생성하는 서버측 프로그램 혹은 그 사양. Java로 작성된다.
+- JSP(JavaServer Pages): HTML 내에 자바 코드를 삽입하여 웹 서버에서 동적으로 웹 페이지를 생성하여 웹 브라우저에 돌려주는 언어. 실행시에는 자바 서블릿으로 변환된 후 실행되므로 서블릿과 거의 유사하지만, 서블릿과 달리 HTML 표준에 따라 작성되어 웹 디자인에 용이한 이점이 있다고 함.(ex: 서블릿을 활용하면 문구 출력할 때 Java 언어를 써서 sysoutpritnln을 써야해서 불편한데, JSP를 쓰면 HTML로 작성한 문구도 서블릿으로 알아서 변환되므로 편하다고 하네요.)
+
+- EL(Expression Language): JSP 2.0 Spec에 추가된 개념이라고하며, JSP에서 자바코드와 JSP 스크립트 코드를 더욱 더 간결하게 하기 위해 등장함. EL을 사용하면 Java 코드를 더욱 간결하게 표현가능(ex 자료형 설정안해도 되는 등).  
+
+- JASPIC(Java Authentication SPI for Containers): 써드파티 보안 제공자가 웹 애플리케이션으로 예정된 응답 메시지 및 HTTP 요청의 Java EE(Java Platform, Enterprise Edition) 인증을 처리할 수 있게 함. 
+
 ---
