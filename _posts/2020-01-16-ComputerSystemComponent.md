@@ -12,7 +12,7 @@ comments: true
 ### Computer System Component<br>
 
 #### 1.Processor(CPU = Central processing Unit)
- <img src="https://github.com/junghyun100/junghyun100.github.io/blob/master/images/%ED%94%84%EB%A1%9C%EC%84%B8%EC%84%9C.png" width= "350px" height ="350px" alt="My Image">
+ <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/%ED%94%84%EB%A1%9C%EC%84%B8%EC%84%9C.png" width= "350px" height ="350px" alt="My Image">
 
 중앙 처리 장치(CPU)는 명령어를 해석하는 컴퓨터의 한 부분이다.
 마이크로프로세서(Microprocessor)는 마이크로컴퓨터의 한 부분이다.
