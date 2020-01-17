@@ -44,6 +44,9 @@ BUS는 프로세스를 비롯한 각 장치 간 또는 서스시스셈을 서로
 4. 메모리 주소 레지스터 = 접근하려는 메모리의 주소 저장
 5. 메모리 버퍼 레지스터 - 메모리에서 정보를 읽을 떄 또는 정보를 저장할 때 사용한다
 
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/register.PNG" width= "600px" height ="440px" alt="My Image">
+ 
+
 학부시절 마이크로프로세서 공부를 할때 배웠던 내용들이라 감회가 새롭습니다.<br>
 당시에는 Operand나 Operator가 왜 그렇게 안 외워 졌는지 모르겠으나.. 포스팅을 위해서 다시 한번 공부중입니다.<br>
 조금 더 공부후 레지스터간의 관계와 메모리에 대해서 포스팅 하겠습니다.<br>
