@@ -46,7 +46,7 @@ comments: true
 일반적으로 사이클이 접근시간보다 약간 크며 세부 구현방법에 따라 달라진다.<br>
 
 메인메모리는 프로세서가 사용할 프로그램이나 데이터를 저장하는 작업장<br>
-프로세서 - 메모리 - 디스크 사ㅇ에서 발생하는 디스크 입출력 병목현상을 해결하는 역할을 한다.<br>
+프로세서 - 메모리 - 디스크 상에서 발생하는 디스크 입출력 병목현상을 해결하는 역할을 한다.<br>
 
 <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/memory3.PNG" width= "450px" height ="300px" alt="My Image">
 
