@@ -20,6 +20,8 @@ JSP 페이지는 .jsp 확장명으로 저장되어 서버가이 페이지가 JSP
 
 ####  JSP의 실행순서
 
+<img src="https://beginnersbook.com/wp-content/uploads/2013/05/JSP-life-cycle.png" width= "420px" height ="380px" alt="My Image">
+
 1. 브라우저가 웹서버에 JSP에 대한 요청 정보를 전달한다.
 
 2. 브라우저가 요청한 JSP가 최초로 요청했을 경우만 JSP로 작성된 코드가 서블릿으로 코드로 변환한다. (java 파일 생성)
