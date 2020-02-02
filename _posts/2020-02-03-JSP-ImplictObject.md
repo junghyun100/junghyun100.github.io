@@ -64,5 +64,16 @@ url에서 그 값을 받은 후 print하는 코드입니다.
 
 <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/implictObject%EA%B2%B0%EA%B3%BC.PNG" alt="My Image">
 
+### 조금 더 알아보기..
+
+내장객체를 JSP 선언문에서 사용할 수 있을까요? 사용할 수 없다면 왜 그럴까요?
+
+선언문(<%! %>) 이외의 표현식(<% %>, <%= %>, <%@ %>)은 JSP가 서블릿으로 바뀌어질 때
+
+public void jspService 메서드 안에 코드가 작성됩니다.
+
+기본적으로 출력(out), 세션(out), 요청(request), 응답(response)등을 담당하는 객체들이 내장되어 있는데 내장된 객체는 해당 jspService  메소드 '안'에서 사용 할 수 있습니다. 
+
+JSP선언문에서 선언하면 써블릿에서는 service메소드 밖에 선언하는 것입니다. 하지만 내장객체는 써블릿의 service메소드 안에 선언되어 있기 때문에 사용할 수 없습니다.
 
 ---
