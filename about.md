@@ -12,4 +12,4 @@ permalink: /about/
 
 ### Contact me
 
-[qorwjdgus8951@gamil.com](mailto:qorwjdgus8951@gmail.com)
+[qorwjdgus8951@gmail.com](mailto:qorwjdgus8951@gmail.com)
