@@ -117,7 +117,7 @@ public class LogicServelt extends HttpServlet {
 
 위 과정은 아래의 그림과 같은 로직으로 형성이 됩니다.
 
-<img src="https://www.edwith.org/viewer/image?src=https%3A%2F%2Fcphinf.pstatic.net%2Fmooc%2F20180129_201%2F1517203743283AcQbB_PNG%2F2_4_3_servlet_jsp.PNG">
+<img src="https://cphinf.pstatic.net/mooc/20180129_201/1517203743283AcQbB_PNG/2_4_3_servlet_jsp.PNG">
 
 
 
