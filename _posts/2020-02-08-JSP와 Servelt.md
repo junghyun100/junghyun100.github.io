@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "JSP와 Servelt 연동"
+title: "JSP와 Servlet 연동"
 tags: [JSP]
 comments: true
 ---
  
-해당 Post는 JSP와 Servelt연동하는 것에 대해 정리한 파일입니다.
+해당 Post는 JSP와 Servlet연동하는 것에 대해 정리한 파일입니다.
 
 ---
 
-### JSP와 Servelt연동
+### JSP와 Servlet연동
 
 Servlet은 프로그램 로직이 수행되기에 조금 유리한 구조입니다.
 
