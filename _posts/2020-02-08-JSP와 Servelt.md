@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JSP"
+title: "JSP와 Servelt 연동"
 tags: [JSP]
 comments: true
 ---
