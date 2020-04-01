@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQL고득점 - SELECT"
+title: "SQL고득점 - SUM, MAX, MIN"
 tags: [SQL]
 comments: true
 
