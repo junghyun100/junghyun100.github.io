@@ -91,4 +91,7 @@ void selection_sort(int array[], int n){
 1. C언어로 쉽게 풀어쓴 자료구조 (천인국, 공용해, 하상호 지음)
 
 2. https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-algorithm.html
+
+2020-04-09 수정
+
 ---
