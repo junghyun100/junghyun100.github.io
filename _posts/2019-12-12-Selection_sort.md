@@ -56,5 +56,39 @@ void selection_sort(int array[], int n){
   }
 }
 ```
+```java
+	static void selection_sort(int arr[], int n) {
+		for(int i=0; i<n-1; i++) {
+			int select = i;
+			for(int j=i+1; j<n; j++) {
+				int least = j;
+				if(arr[select] > arr[least]) {
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+	}
+```
+## 선택 정렬의 특징
+- 장점
+ 1. 자료의 이동 횟수가 미리 결정된다는 점
+- 단점
+ 1. 값이 같은 레코드가 있는 경우 상대적인 위치가 변경될 수 있어서 안정성을 만족하지 못한다는 점
 
+## 선택 정렬의 시간 복잡도 (분석)
+- 비교 횟수
+ 1. 외부 루프는 n-1번 실행
+ 2. 내부 루프는 n-1, n-2, ... , 2, 1번 실행
+- 교환 횟수
+ 1. 외부 루프의 실행 횟수와 같으며 한번 교환하기 위해 3번의 이동이 필요하므로 전체 이동 횟수는 3(n-1)이 된다.
+- 시간복잡도
+ 1. (n-1) + (n-2) + ... + 2 + 1 = n(n-1)/2 = O(n^2)
+ 
+ 출처
+ 
+1. C언어로 쉽게 풀어쓴 자료구조 (천인국, 공용해, 하상호 지음)
+
+2. https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-algorithm.html
 ---
