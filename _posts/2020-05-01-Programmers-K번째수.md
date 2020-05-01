@@ -75,4 +75,7 @@ commands[loop][2] = (잘라낸 수를 정렬 후) 몇번째 숫자를 뽑을 것
 잘라낸 배열을 arrayTest로 옮긴 후 Arrays.sort하면서 정렬 시킵니다.
 
 그리고 원하는 숫자가 있는 위치를 골라서 answer배열에 넣어줍니다.
+
+https://programmers.co.kr/learn/courses/30/parts/12198
+
 ---
