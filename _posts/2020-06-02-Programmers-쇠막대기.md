@@ -6,7 +6,7 @@ comments: true
 
 ---
 
-위 문제는 Programmers 123 나라의 숫자 문제에 관한 설명입니다.<br>
+위 문제는 Programmers 쇠막대기 문제에 관한 설명입니다.<br>
 
 ---
 
