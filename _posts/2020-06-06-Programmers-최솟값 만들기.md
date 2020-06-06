@@ -64,6 +64,6 @@ class Solution
 
 
 
-<a href= "https://programmers.co.kr/learn/courses/30/lessons/12941"></a>
+<a href= "https://programmers.co.kr/learn/courses/30/lessons/12941">최솟값 만들기</a>
 
 ---
