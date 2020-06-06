@@ -111,6 +111,6 @@ class Point {
 
 ```
 
-<a href= "https://programmers.co.kr/learn/courses/30/lessons/1829"></a>
+<a href= "https://programmers.co.kr/learn/courses/30/lessons/1829">카카오프렌즈 컬러링북</a>
 
 ---
