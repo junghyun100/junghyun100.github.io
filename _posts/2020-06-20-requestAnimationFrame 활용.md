@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "requestAnimationFrame 활용"
-tags: [requestAnimationFrame]
+tags: [웹 애니메이션]
 comments: true
 ---
  
