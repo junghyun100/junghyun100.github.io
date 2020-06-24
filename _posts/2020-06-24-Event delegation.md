@@ -21,7 +21,7 @@ for문으로 addEventListener를 사용해야 할까요?
 
 addEventListener를 사용해서 이벤트 등록을 할 수 있을겁니다.
 
-<img src="https://www.edwith.org/viewer/image?src=https%3A%2F%2Fcphinf.pstatic.net%2Fmooc%2F20180207_239%2F15179786577601DaLw_PNG%2F3-5-3-image-list.png">
+<img src="https://cphinf.pstatic.net/mooc/20180207_239/15179786577601DaLw_PNG/3-5-3-image-list.png">
 
 ### for example
 
@@ -102,7 +102,7 @@ ul.addEventListener("click",function(evt) {
 
 Capturing 단계에서 이벤트 발생을 시키고 싶다면 addEventListener 메서드의 3번째 인자에 값을 true로 주면 됩니다. 
 
-<img src= "https://www.edwith.org/viewer/image?src=https%3A%2F%2Fcphinf.pstatic.net%2Fmooc%2F20180207_43%2F1517986448399nM5Jy_PNG%2F3-5-3_Event_Bubbling.png">
+<img src= "https://cphinf.pstatic.net/mooc/20180207_43/1517986448399nM5Jy_PNG/3-5-3_Event_Bubbling.png">
 
 ## Event delegation
 
