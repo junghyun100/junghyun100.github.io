@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Programmers-기능개발"
+title: "Programmers-위장"
 tags: [Programmers]
 comments: true
 
 ---
 
-위 문제는 Programmers 기능개발 문제에 관한 설명입니다.<br>
+위 문제는 Programmers 위장 문제에 관한 설명입니다.<br>
 
 ---
 
