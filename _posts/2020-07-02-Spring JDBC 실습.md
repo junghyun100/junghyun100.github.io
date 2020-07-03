@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring JDBC"
+title: "Spring JDBC 실습"
 tags: [Spring JDBC]
 comments: true
 ---
