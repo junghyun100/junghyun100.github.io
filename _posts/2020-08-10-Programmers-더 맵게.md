@@ -76,6 +76,6 @@ public class Solution {
 
 3. 이 과정을 반복하면서 마지막에 남은 answer를 K와 비교해 K 이상으로 만들 수 없는 경우에는 -1을 return, 아니라면 answer를 return합시다.
 
-<a href= "https://school.programmers.co.kr/courses/10313/lessons/63176">더 맵게</a>
+<a href= "https://programmers.co.kr/learn/courses/30/lessons/42626">더 맵게</a>
 
 ---
