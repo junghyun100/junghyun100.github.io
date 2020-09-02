@@ -95,10 +95,8 @@ class Solution {
 
 API를 살펴 봅시다.
 
-> public static String valueOf(int i)<br>
-<br>
+> * public static String valueOf(int i)<br>
 Returns the string representation of the int argument.<br>
-<br>
 The representation is exactly the one returned by the Integer.toString method of one argument. 
 
 간단히 말하자면 int형 값 파라미터로 넣으면 String 표현식으로 변경시켜 줍니다.
