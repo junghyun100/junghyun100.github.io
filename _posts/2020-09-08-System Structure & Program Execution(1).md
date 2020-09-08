@@ -18,6 +18,8 @@ CPU는 매 클럭 사이클마다 Memory에서 인스트럭션(기계어)를 하
 
 이것을 Device Controller라고 합니다.
 
+<img src= "https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0.PNG" width = 480px heigth = 350px>
+
 ## Device Controller
 
 * 해당 IO 장치 유형을 관리하는 일종의 작은 CPU
