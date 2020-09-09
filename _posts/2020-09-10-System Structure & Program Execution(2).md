@@ -81,6 +81,6 @@ OS를 공부하면서 정리를 한 내용들 입니다.<br>
 
 `Blocking`과 `NonBlocking`에 대해서도 포스팅 해놓았으니 참고하면 좋을 듯 합니다.
 
-<a href = "https://junghyun100.github.io/Blocking&NonBlocking/"> `Blocking`과 `NonBlocking`</a>
+<a href = "https://junghyun100.github.io/Blocking&NonBlocking/"> Blocking과 NonBlocking</a>
 
 ---
