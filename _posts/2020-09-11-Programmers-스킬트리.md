@@ -60,15 +60,60 @@ class Solution {
 }
 ```
 
-음.. 선행 스킬들을 해시맵으로 해서 순서를 정했습니다.
+## 이번 문제는 문자열 문제였습니다.
 
-스킬 목록을 확인하면서 선행 스킬들만 따로 문자열로 만들었습니다.
+## 해결책
 
-따로 만든 문자열을 가지고 해시맵을 통해 순서를 확인했습니다.
+1. 처음에 첫번째 스킬트리의 값을 `postIndex`에 넣고,  2번째 스킬부터 `currentIndex`에 넣어 비교합니다.
 
-처음에는 감을 잡지 못해서 시작하는데 어려움이 있었습니다
+2. 불가능하다면 `answer`의 갯수를 -1 시키고 for문을 break 시키고 다음 경우를 확인합니다.
 
-다른 분들이 한 아이디어를 보고 작성했습니다.
+3. 가능한 경우라면 `currentIndex`를 `postIndex`에 넣고 반복합니다.
+
+처음에는 문제를 이해하지 못해서 감을 잡지 못해서 시작하는데 어려움이 있었습니다.
+
+## 예
+
+예시를 들어서 설명해 봅시다.
+
+`skill`에는 제가 사용하는 스킬 `CBD`가 있습니다.
+
+`skill_trees`에는 다양한 스킬트리가 있고,
+
+가장 갯수가 많이 겹치는 경우를 세기 위해 `answer`를 사용합시다.
+
+`postIndex`와 `currentIndex`는 해결책 1번에 나와있듯이 사용합니다.
+
+### 분기문 안쪽을 살펴봅시다!
+
+```java
+for (int i = 0; i < skill_trees.length; i++) {
+		postIndex = skill_trees[i].indexOf(skill.charAt(0));
+		for (int j = 1; j < skill.length(); j++) {
+			currentIndex = skill_trees[i].indexOf(skill.charAt(j));
+			if((postIndex > currentIndex && currentIndex != -1) || (postIndex == -1 && currentIndex != -1)) {
+				answer--;
+				break;
+			} 
+			postIndex = currentIndex;
+		}
+	}
+```
+스킬트리의 종류 갯수만큼 반복을 시키고,
+
+`postIndex`에는 스킬트리의 `i`번째의 인덱스가 `skill`의 첫번쨰 index와 같은가를 판단합니다.
+
+이후부터는 그 스킬트리의 끝까지 를 `currentIndex`에 넣고 확인을 합니다.
+
+이전 `postIndex`보다 `currentIndex`가 작거나 길이가 끝이났고, IndexOf로 인해 해당 값은 존재한다면? 
+
+해당 스킬트리는 배우지 못하는 경우이므로, `answer`를 줄입니다.
+
+또는 해당 값자체가 존재하지 않는다면 answer를 마찬가지로 줄여줍니다.
+
+그런경우 거기까지만 하고 다음 스킬트리와 비교합니다.
+
+이렇게 나온 `answer`의 갯수는 불가능한 스킬트리가 빠진 모든 갯수가 담겨있습니다.
 
 <a href= "https://school.programmers.co.kr/courses/10313/lessons/63163">스킬트리</a>
 
