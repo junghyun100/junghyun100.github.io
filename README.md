@@ -23,13 +23,13 @@
 
 - 메인 화면
 
-  ![Main](./images/readme/Main.png)
+  ![Main](https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/readme/Main.PNG)
   
 - 기록 현황
 
-  ![Archive](./images/readme/Archive.png)
+  ![Archive](https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/readme/Archive.PNG)
   
 - 태그 별
   
-  ![Tags](./images/readme/Tag.png)
+  ![Tags](https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/readme/Tag.PNG)
   
