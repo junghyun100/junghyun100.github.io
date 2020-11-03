@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "네트워크 - 가상메모리(4)"
+title: "네트워크 - The Internet and Protocol"
 tags: [컴퓨터 네트워크]
 comments: true
 
