@@ -35,13 +35,17 @@ comments: true
 * 하드웨어 구성요소
 
 	* end host : 말단 호스트(네트워크의 끝부분에 달려있는 호스트들)
+
 	* interconnection devices : end host들을 이어주는 중간 장비들 (router, switch, repeater)
+
 	* Links : end host나 interconnection device들은 link를 통해 연결됩니다.(cooper, fiber, radio, satellite)
 
 * 소프트웨어 구성요소
 
 	* operating software : 운영체제
-	* application program : 운영체제 위에 각종 응용프로그램 ( 웹 브라우저, 메신져 프로그램 등)
+
+	* application program : 운영체제 위에 각종 응용프로그램 ( 웹 브라우저, 메신져 프로그램 등 )
+
  	* protocols : 서로 다른 노드들 끼리 통신을 하면서 지켜야 하는 약속 
 
 ## Communication Protocol
