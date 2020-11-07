@@ -88,7 +88,7 @@ Vint Cerf 박사는 네트워크의 설계 목적이 아래와 같다고 이야�
 
 <img src ="http://wiki.hash.kr/images/a/a8/%EC%99%84%EC%A0%84%EC%97%B0%EA%B2%B0%ED%98%95_%ED%86%A0%ED%8F%B4%EB%A1%9C%EC%A7%80.png">
 
-<a href="http://wiki.hash.kr/index.php/%ED%8C%8C%EC%9D%BC:%EC%99%84%EC%A0%84%EC%97%B0%EA%B2%B0%ED%98%95_%ED%86%A0%ED%8F%B4%EB%A1%9C%EC%A7%80.png>출처</a>
+<a href="http://wiki.hash.kr/index.php/%ED%8C%8C%EC%9D%BC:%EC%99%84%EC%A0%84%EC%97%B0%EA%B2%B0%ED%98%95_%ED%86%A0%ED%8F%B4%EB%A1%9C%EC%A7%80.png">출처</a>
 
 연결에 필요한 링크의 개수 : ISP의 갯수의 제곱(ISP 갯수가 N개 라면 N^2개)
 
