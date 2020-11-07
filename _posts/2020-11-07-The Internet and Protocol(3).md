@@ -86,7 +86,7 @@ Vint Cerf 박사는 네트워크의 설계 목적이 아래와 같다고 이야�
 
 > scalability가 낮다 : 참여자 수가 증가하면 증가 할 수록 서비스가 안정적이 되기 힘들다.
 
-<img src ="http://wiki.hash.kr/images/a/a8/%EC%99%84%EC%A0%84%EC%97%B0%EA%B2%B0%ED%98%95_%ED%86%A0%ED%8F%B4%EB%A1%9C%EC%A7%80.png">
+<img src ="https://lh3.googleusercontent.com/proxy/by0lNKTRpm4oTOWsemM9Yi7bUeRE3ghB1bJ6kwwzKyKD_hnvNIzbANsB4qBVV36qSph1ZLuMeMsjoFbXxzdUHqsyGYj2QTBQnNy1BfsByv0XK6di_ZqN6H3YzYyAwAAV4NZ6WvAHym-1pcAjy9IRKQU3nrk4Yee6TVx3ymCL7f2QiFQd7YOgIknJUy_ZSK4i2uL54BfubJNw7VtNljskBqM7hXJrUObk-hNlj5_fiNgCNckPKPgSM9GwmzBpsmgDfnYhHRJM7iwDV33NR7GIEJBe_Cb3R2AK8GC6xZDzbaGY6N45DNurIBH9iLmfJCBE0JQ">
 
 <a href="http://wiki.hash.kr/index.php/%ED%8C%8C%EC%9D%BC:%EC%99%84%EC%A0%84%EC%97%B0%EA%B2%B0%ED%98%95_%ED%86%A0%ED%8F%B4%EB%A1%9C%EC%A7%80.png">출처</a>
 
