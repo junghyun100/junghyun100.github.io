@@ -117,8 +117,4 @@ Transmission delay도 이것은 아웃풋 링크의 밴드 위스(bps)에 따라
 
 propagation이라는 것은 ‘전파 속도’ 라는 것이죠. Transemission delay는 전송 속도라고 합니다.
 
-네 가지 딜레이 중에서 크게 중요하게 봐야 할 것은 아래의 두 가지 입니다. 
-
-<strong>Queueing delay와 Transmission delay.</strong>
-
 ---
