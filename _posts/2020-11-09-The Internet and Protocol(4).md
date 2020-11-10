@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "네트워크 - Brief Introduction to Internet Functions"
+title: "네트워크 - Brief Introduction to Internet Functions(4)"
 tags: [컴퓨터 네트워크]
 comments: true
 
