@@ -46,7 +46,7 @@ comments: true
 
 ### Packet Sniffing
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1111/Sniffing.PNG">
 
 지나가는 패킷을 무단으로 읽어들이는 것 입니다.
 
@@ -70,6 +70,8 @@ DoS 서비스는 과거에는 하나의 컴퓨터를 가지고
 
 > 해결책 : 단시간 내에 엄청나게 많은 데이터를 보내 오는 패킷이나 사이트가 있다면, 해당 IP 주소를 보고 그 주소만 차단
 
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1111/DDOs.PNG">
+
 해결책이 등장하면서 다시 해커들은 또 새로운 것을 개발 했습니다.
 
 이것이 <strong>Distrubuted Denial of Service</strong> 입니다.
@@ -86,7 +88,7 @@ DoS 서비스는 과거에는 하나의 컴퓨터를 가지고
 
 ### Fake Address
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1111/Fake%20Address.PNG">
 
 DDoS의 해결책이 등장하면서 데이터를 보내는 클라이언트의 주소를 계속 바꾸는 방법을 사용하게 되었습니다.
 
