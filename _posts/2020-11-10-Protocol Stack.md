@@ -18,7 +18,7 @@ comments: true
 
 프로토콜의 레이어들은 우리가 비행기를 타고 여행을 할 때 받게 되는 서비스와 비유 해 볼 수 있습니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1110/layerin.PNG">
 
 우리가 출발 공항에 도착하면 맨 먼저 티켓을 받고, 그 다음에 짐을 부치고, 이어서 비행기에 탑승을 하게 되고,
 
@@ -30,7 +30,7 @@ comments: true
 
 # Internet Protocol Stack
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1110/internetProtocol.PNG">
 
 인터넷 프로토콜은 그림과 같이 다섯 가지의 계층을 가지고 있습니다.
 
@@ -82,7 +82,7 @@ source에서 destination까지 가다 보면은 여러 계층을 거쳐가게 �
 
 ## OSI 7 Layer
 
-<a href>이전 포스팅</a>
+<a href="https://junghyun100.github.io/OSI7layer/">이전 포스팅</a>
 
 이전에 OSI 7계층에 대해 간략하게 정리해 놓았었습니다.
 
@@ -138,7 +138,7 @@ twisted pair cable을 사용해서 Physical layer 설계자들이 잘 설계를 
 
 ## Encapsulation
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1110/Encapsulation.PNG">
 
 예를 들어 웹 브라우저나 메신저 이런 프로그램이라고 하면 
 
