@@ -40,7 +40,7 @@ comments: true
 
 ## Application Architectures
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1112/Application%20Architecture.PNG">
 
 크게 두 종류로 살펴 볼 수 있는데, 먼저 사용했던 것은 `클라이언트 서버 모델(Client-server model)`입니다.
 
@@ -108,7 +108,7 @@ P2P 모델의 특징은 `self scalability` 입니다.
  
 또 스카이프(skype)에서 사용하는 프로토콜이 있습니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1112/Application%20Protocol.PNG">
 
 그런데 이렇게 아래 위로 나누어 놓은 이유는 HTTP나 SMTP는 `오픈 프로토콜(open protocols)`이라고 해서
  
