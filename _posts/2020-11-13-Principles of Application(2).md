@@ -16,7 +16,7 @@ comments: true
 
 다양한 네트워크 애플리케이션들이 요구하는 특성을 한번 살펴보겠습니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1113/Requirements%20of%20Network%20Applications.PNG">
 
 이 응용들이 요구하는 requirement, 
 
@@ -124,7 +124,7 @@ TCP를 사용하게 되면 에러가 발생했을 때 너무 긴 지연시간이
 
 그래서 응용 프로그램, 멀티미디어 프로그램에 적합합니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1113/TCPUDPProtocol.PNG">
 
 우리가 많이 쓰는 애플리케이션과 그 애플리케이션이 사용 하고 있는 TCP프로토콜이 정리된 표 입니다.
 
