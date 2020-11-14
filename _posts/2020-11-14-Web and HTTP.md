@@ -52,7 +52,7 @@ TCP 프로토콜을 통해서 데이터를 전달하기 위해서는 먼저 TCP 
 
 TCP는 다시 네트워크 레이어를 거치고 데이터 링크 레이어를 거쳐서 물리단을 거쳐 이렇게 통신을 하게 됩니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1114/RTT%2CHTTP_response_Time.PNG">
 
 HTTP는 시간 축으로 비교를 해서 보면 그림과 같이 진행이 됩니다. 
 
@@ -82,6 +82,8 @@ HTTP는 시간 축으로 비교를 해서 보면 그림과 같이 진행이 됩�
 
 HTTP는 일단 클라이언트 request와 서버 response 두 가지로 이루어지는데 구성되는 형태는 다음과 같습니다.
 
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1114/MessageFormat.PNG">
+
 > method : 이것은 특정 명령어에 해당 하는 것
 
 어떤 데이터를 갖고 싶으면 GET이나 POST 이런 method가 들어가는 것이고요
@@ -98,7 +100,7 @@ HTTP는 일단 클라이언트 request와 서버 response 두 가지로 이루�
 
 ## Http Request Message
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1114/HttpRequestMessage.PNG">
 
 HTTP request message에 예를 보면 다음과 같습니다. 
 
@@ -116,7 +118,7 @@ HTTP request message에 예를 보면 다음과 같습니다.
 
 ## HTTP Response Message
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1114/HttpResponseMessage.PNG">
 
 위처럼 request를 받게 되면 서버는 거기에 response를 하게 됩니다. 
 
