@@ -34,7 +34,7 @@ HTTP가 제공하지 않는 사용자 state를 쿠키를 통해서 서버에 저
 
 ### Cookies : Keeping "State"
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1115/%EC%BF%A0%ED%82%A4.PNG">
 
 클라이언트가 아마존 서버에 접속을 하는 상황이라고 생각을 해 봅시다.
 
@@ -74,7 +74,7 @@ HTTP가 제공하지 않는 사용자 state를 쿠키를 통해서 서버에 저
 
 ## Web Caching(Proxy Server)
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1115/%EC%9B%B9%EC%BC%80%EC%8B%B1.PNG">
 
 예를 들어 구글 또는 네이버나 다음 같은 사이트를 많은 사람들이 접속한다면, 
 
