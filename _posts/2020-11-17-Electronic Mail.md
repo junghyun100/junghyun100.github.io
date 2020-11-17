@@ -47,7 +47,7 @@ SMTP는 `handshaking`, 서로 메세지를 보내는 서버와 받는 서버를 
 
 ### SMTP Example
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1117/SMTP.PNG">
 
 예를 들어서 alice가 사용하는 특정 메일 서버의 이름은 crepes.fr 입니다.
 
@@ -66,6 +66,8 @@ SMTP로 접속을 하게 되면 서버는 클라이언트한테 먼저 자기의
 보통 사용자가 서버에 접속하거나 서버 끼리는 SMTP를 쓰는데,
 
 서버에서 메일을 가져 올 때는 보통 `메일 엑세스 프로토콜(mail access protocol)` 이라는 것을 사용 합니다.
+
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1117/mail%20access%20protocol.PNG">
 
 * POP
 
