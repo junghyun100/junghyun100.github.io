@@ -100,5 +100,5 @@ IMAP은 Internet Mail Access Protocol의 약자이고, POP3와 다르게 데이�
 유저에서 서버로 가는 경우, 또는 서버에서 유저로 데이터를 보내는 경우 HTTP를 쓰게 됩니다.
 
 90년대 중반에 Hotmail에서 가장 먼저 했고 google, yahoo도 역시 HTTP를 통해서 메일을 사용하는 예가 입니다.
- 
+
 ---
