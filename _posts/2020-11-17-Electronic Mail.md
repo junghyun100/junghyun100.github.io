@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "네트워크 - Electronic Mail"
+title: "네트워크 - E-Mail"
 tags: [컴퓨터 네트워크]
 comments: true
 
@@ -55,9 +55,9 @@ hamberger.edu라는 서버의 ID bob이라는 사람한테 메일을 보내려�
 
 SMTP로 접속을 하게 되면 서버는 클라이언트한테 먼저 자기의 이름을 전달 해 줍니다.
 
-서버가 '나는 hamberger.edu야' 이렇게 알려 주는 것이고, 
+서버가 hamberger.edu라는 서버ID를 알려 주는 것이고, 
 
-그러면 클라이언트가 그것에 대한 응답으로 '나는 crepes.fr이야' 이런 식으로 이야기를 하는 것입니다. 
+그러면 클라이언트가 그것에 대한 응답으로 crepes.fr를 이야기 하는 것입니다. 
 
 이렇게 데이터가 시작 되고, 실제 데이터가 다 날아가고 나면 첫 번째 자리에 점을 하나 찍음으로써 메세지 전달이 끝나는 것입니다.
  
@@ -99,6 +99,7 @@ IMAP은 Internet Mail Access Protocol의 약자이고, POP3와 다르게 데이�
 
 유저에서 서버로 가는 경우, 또는 서버에서 유저로 데이터를 보내는 경우 HTTP를 쓰게 됩니다.
 
-90년대 중반에 Hotmail에서 가장 먼저 했고 google, yahoo도 역시 HTTP를 통해서 메일을 사용하는 예가 입니다.
+90년대 중반에 Hotmail에서 가장 먼저 했고 google, yahoo도 역시 HTTP를 통해서 메일을 사용하는 예 입니다.
+
 
 ---
