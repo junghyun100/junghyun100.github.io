@@ -12,7 +12,7 @@ comments: true
 -참고 K-mooc 부산 대학교 유영환 교수님 : 컴퓨터 네트워크 강의
 
 ---
- 
+
 # Electronic Mail
 
 전자우편을 구성 하는 요소는 크게 세 가지 입니다. 
@@ -101,5 +101,4 @@ IMAP은 Internet Mail Access Protocol의 약자이고, POP3와 다르게 데이�
 
 90년대 중반에 Hotmail에서 가장 먼저 했고 google, yahoo도 역시 HTTP를 통해서 메일을 사용하는 예가 입니다.
  
-
 ---
