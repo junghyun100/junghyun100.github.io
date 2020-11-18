@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "네트워크 - E-Mail"
+title: "네트워크 - Electronic Mail"
 tags: [컴퓨터 네트워크]
 comments: true
 
@@ -11,17 +11,15 @@ comments: true
 
 -참고 K-mooc 부산 대학교 유영환 교수님 : 컴퓨터 네트워크 강의
 
-
----
 ---
 
 # Electronic Mail
 
 전자우편을 구성 하는 요소는 크게 세 가지 입니다. 
 
-일단 `user agents`, 우리가 메일을 작성할 수 있게 만드는 클라이언트 프로그램을 뜻합니다.
+일단 `user agents` , 우리가 메일을 작성할 수 있게 만드는 클라이언트 프로그램을 뜻합니다.
 
-`mail server`, gmail이라던지 야후 메일이라던지 네이버 메일이라던지 핫메일이라던지 이런 메일 서버들이 존재합니다.
+`mail server` , gmail이라던지 야후 메일이라던지 네이버 메일이라던지 핫메일이라던지 이런 메일 서버들이 존재합니다.
 
 mail server 또는 user agents들이 데이터를 주고 받기 위한 SMTP, POP3, IMAP와 같은 `protocol`이 존재합니다.
 
