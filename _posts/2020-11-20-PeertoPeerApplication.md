@@ -25,7 +25,7 @@ comments: true
 	        멀티미디어 데이터 스트리밍을 위한 KanKan,
 	        Skype도 역시 P2P 방식으로 인터넷 전화, Voice of IP를 수행하고 있습니다.
 		
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1120/p2p.PNG">
 
 그림의 P2P의 전체 구조를 보면 
 
@@ -35,7 +35,7 @@ P2P에서는 업로드도 하고 다운로드도 하는, 그래서 서버로도 
 
 그래서 scalable 하다라고 말합니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1120/ClientServer%20VS%20P2P.PNG">
 
 새로운 peer가 들어오면 물론 데이터를 데이터를 요구하기도 하지만 서버로도 동작하기 때문에 
 
@@ -51,7 +51,7 @@ P2P에서는 업로드도 하고 다운로드도 하는, 그래서 서버로도 
 
 ## Case Study : bitTorrent
 
-<img src = "">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1120/BitTorrent.PNG">
 
 일단 P2P를 통해서 파일 공유를 할 때에는 파일이 크게 한 덩어리로 되어있지 않습니다. 
 
