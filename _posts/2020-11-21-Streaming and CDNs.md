@@ -21,13 +21,13 @@ comments: true
 
 두 개의 서비스만 해도 53%이고 그 외에 멀티미디어 트래픽까지 합치면 7~80% 이상이 멀티미디어 트래픽으로 합쳐 집니다.
 
-이런 비디오 트래픽의 문제점은 역시 scalability 입니다. 
+이런 비디오 트래픽의 문제점은 역시 `scalability` 입니다. 
 
 특히 멀티미디어 서비스는 데이터가 크기 때문에 데이터 서버가 한 군데에 있게 되면 요청들을 처리하기 버거워 집니다.
 
 클라이언트 수가 많고 일부 클라이언트들은 매우 멀리 있는데 여기에 큰 용량의 데이터를 전달하는 것은 쉽지가 않게 됩니다.
 
-이것에 대한 해결책으로 나온 것이 Content Distribution Networks 입니다.
+이것에 대한 해결책으로 나온 것이 `Content Distribution Networks` 입니다.
 
 ## Content Distribution Networks(Content Provider Networks)
 
@@ -41,7 +41,7 @@ comments: true
 
 ## Case Study : Netflix
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1121/NetFilx.PNG">
 
 넷플릭스를 통해서 영화를 보고싶다고 하면 
 
@@ -51,14 +51,14 @@ comments: true
 
 이 클라이언트는 아마존 클라우드에 접속을 해서 자기가 보고싶은 영화를 검색합니다.
 
-특정한 영화를 검색하게 되면 그 영화에 대한 manifest file이라는 것, 
+특정한 영화를 검색하게 되면 그 영화에 대한 `manifest file`이라는 것, 
 
-XML이라는 언어로 되어 있는 HTML과 비슷한 그런 파일을 클라이언트 측에 주게 됩니다.
+`XML`이라는 언어로 되어 있는 HTML과 비슷한 그런 파일을 클라이언트 측에 주게 됩니다.
 
 그러면 사용자의 위치와 환경을 고려해서 가장 적합한 서버의 위치를 알려줍니다.
 
-실제 영화 파일은 넷플릭스의 Content Distribution Network에 분산이 되어 있는 상태입니다.
+실제 영화 파일은 넷플릭스의 `Content Distribution Network`에 분산이 되어 있는 상태입니다.
 
-사용자는 특정한 서버의 HTTP를 통해서 영화 파일을 가져오도록 전달 해 달라고 요구하게 되는 것이고, 영화가 전달이 됩니다.
+사용자는 특정한 서버의 `HTTP`를 통해서 영화 파일을 가져오도록 전달 해 달라고 요구하게 되는 것이고, 영화가 전달이 됩니다.
 
 ---
