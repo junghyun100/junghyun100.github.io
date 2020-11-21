@@ -17,7 +17,7 @@ comments: true
 
 # Transport Layer Function
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1121/TransportLayer.PNG">
 
 네트워크 레이어에서 가장 중요한 것은 인터넷 프로토콜이고,
 
@@ -53,7 +53,7 @@ comments: true
 
 전송 계층에서 제공하는 기능을 보내는 쪽과 받는 쪽으로 나누어 보면 아래의 그림과 같습니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1121/TransportLayer2.PNG">
 
 보내는 쪽에서는 애플리케이션이 주는 메시지를 하부에 내려줍니다.
 
