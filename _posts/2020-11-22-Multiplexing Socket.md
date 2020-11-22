@@ -17,7 +17,7 @@ comments: true
 
 논리 회로에 있는 Multiplexer, Demultiplexer와 개념이 같습니다. 
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1122/Multiplexing%20and%20Demultiplexing.PNG">
 
 ## Multiplexing(다중화)
 
@@ -53,7 +53,7 @@ Multiplexing와는 반대로 섞여서 날아온 데이터들은
 
 결론부터 말하자면 `전송 계층에서 제공` 합니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1122/Whoprovide%20MpDmp.PNG">
 
 왼쪽을 클라이언트를 클라이언트 1번, 오른쪽은 클라이언트 2번이라고 보고, 가운데가 서버입니다.
 
@@ -87,7 +87,7 @@ P3가 보내 온 내용은 P1에, P4가 전해 온 내용은 P2에 나누어서 
 
 그 정보가 `포트 넘버(port number)`가 입니다.
 
-<img src ="">
+<img src ="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1122/HowDemultiplexing.PNG">
 
 그리고 전송 계층의 segment들은 특별한 필드를 갖고 있는데 이 포트 넘버를 갖는 필드가 있습니다.
 
@@ -107,7 +107,7 @@ TCP나 UDP나 그 안에 필드들은 다 똑같지 않은데 맨 첫 번째에 
 
 ## Socket
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1122/Socket.PNG">
 
 보통 OS들은 트랜스포트 레이어와 애플리케이션 레이어 사이에 어떤 API, 함수들을 제공 합니다.
 
