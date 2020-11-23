@@ -24,11 +24,11 @@ User Datagram Protocol의 약자로서
 
 TCP와 달리 어떤 커넥션을 설정하고 보내는 데이터가 아니기 때문에 
 
-connectionless service라고도 이야기를 합니다.
+`connectionless service`라고도 이야기를 합니다.
 
 특별한 어떤 커넥션을 설정하고 거기에 연달아서 데이터를 보내는 형태가 
 
-아니기 때문에 각각의 UDP segment들은 독립적으로 취급이 됩니다.
+아니기 때문에 각각의 `UDP segment`들은 독립적으로 취급이 됩니다.
 
 또한 비 신뢰적인 서비스입니다.
 
@@ -52,7 +52,7 @@ UDP는 보통 에러가 포함이 되더라도 속도가 빨라야 되는,
 
 DNS를 사용 합니다.
 
-Simple Network Management Protocol이라고 해서 
+`Simple Network Management Protocol`이라고 해서 
 
 네트워크 관리 프로토콜이 있는데 여기에도 역시 UDP를 사용 합니다.
 
@@ -60,7 +60,7 @@ Simple Network Management Protocol이라고 해서
 
 애플리케이션(응용) 프로그래머가 직접 구현을 해야 됩니다.
 
-UDP에서 제공하는 segment에 에러가 포함 되어 있다, 포함 되어 있지 않다 
+UDP에서 제공하는 `segment`에 에러가 포함 되어 있다, 포함 되어 있지 않다 
  
 이 정도 정보는 제공 할 수 있는데 그 정보를 기반으로 에러가 포함되어 있다면 
 
@@ -70,7 +70,9 @@ UDP에서 제공하는 segment에 에러가 포함 되어 있다, 포함 되어 
 
 ## UDP Segment Header
 
-UDP도 서비스를 제공하기 위해서는 정보가 있어야 되고, sender가 UDP segment를 만들어서 
+<img src= "https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1124/UDP%20header.PNG">
+
+UDP도 서비스를 제공하기 위해서는 정보가 있어야 되고, `sender`가 UDP segment를 만들어서 
 
 데이터를 담아서 보낼 때 헤더에 그런 정보를 담아서 보내게 됩니다.
 
@@ -106,7 +108,7 @@ TCP와 비교 해 보면 TCP 헤더의 40% 미만의 사이즈를 갖는데, 이
 
 UDP의 또 하나의 장점은 
 
-TCP에서는 congestion control이라는 것이 있는데 UDP는 없습니다.
+TCP에서는 `congestion control`이라는 것이 있는데 UDP는 없습니다.
 
 `Congestion`이라는 것은 한 마디로 네트워크가 처리 할 수 없을 만큼의 데이터 부하가 걸려서 
 
@@ -118,7 +120,7 @@ UDP는 그런 기능이 없기 때문에 응용 프로그램이 보내려고 하
 
 ## UDP CheckSum
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1124/UDP%20header%20Checksum.PNG">
 
 checksum은 간단하게 말해서 전체 UDP segment에 에러가 포함되어 있는지, 있지 않은 지를 판단하는 근거를 제공하는 필드 입니다.
 
@@ -140,13 +142,13 @@ Checksum은 결국 16 bit의 크기를 갖는데 16 bit의 integer 값입니다.
 
 어떤 규칙에 의해서 전체 정보를 기반으로 어떤 규칙에 의해서 checksum을 만들면
 
-receiver는 수신 한 전체 segment를 기반으로, 똑같은 규칙으로 다시 checksum을 재 생성 합니다.
+`receiver`는 수신 한 전체 segment를 기반으로, 똑같은 규칙으로 다시 checksum을 재 생성 합니다.
 
 만약 둘 사이에 checksum 정보가 일치한다고 하면 전송 중에 이 segment에 문제가 발생하지 않았다는 뜻입니다.
 
-그런데 만약에 sender와 receiver가 만들어 낸 checksum 사이에 차이가 있다, 일치하지 않는다고 하면
+그런데 만약에 `sender`와 `receiver`가 만들어 낸 checksum 사이에 차이가 있다, 일치하지 않는다고 하면
 
-sender에서 receiver로 전달 되는 동안에 데이터의 일부라던지 헤더의 일부 정보가 변경되었다는 것입니다.
+`sender`에서 `receiver`로 전달 되는 동안에 데이터의 일부라던지 헤더의 일부 정보가 변경되었다는 것입니다.
 
 변경 되어서 에러가 있다는 것이므로, checksum이 서로 일치하지 않을 때 어떻게 해라 이런 것이 딱 명확하게 규정 되어 있는 것은 아니지만
 
