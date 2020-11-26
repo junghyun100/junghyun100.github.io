@@ -14,7 +14,7 @@ comments: true
 
 # Principles of Reliable Data Transfer
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1126/Principles%20of%20Realiable%20Data%20Transfer.PNG">
 
 신뢰성 있는 서비스를 추상화 해서 그린 그림입니다.
 
@@ -56,6 +56,8 @@ data를 보내는 프로세스와 받는 프로세스들이 존재합니다.
 > 없는 경우만 위에 전달을 하는 것과 비슷하다고 생각하자.
 
 ## Error Type & Solution
+
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1126/Error%20type%20%26%20Solution.PNG">
 
 인터넷에서 발생 할 수 있는 에러 타입을 원인은 여러 가지가 있겠지만,
 
