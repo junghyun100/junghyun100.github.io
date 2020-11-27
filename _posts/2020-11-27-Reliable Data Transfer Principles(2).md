@@ -18,7 +18,7 @@ comments: true
 
 # ARQ 
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1127/Communication%20Error%20Recovery.PNG">
 
 Automatic Repeat reQuest에서 ARQ를 따서 부릅니다.
 
@@ -44,7 +44,7 @@ Pipelining method는 크게 `go-back-N`과
 
 ## Stop-and-Wait
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1127/stop%20and%20wait.PNG">
 
 sender가 하나의 패킷을 보내고 나서 receiver의 응답을 기다립니다.
 
@@ -104,7 +104,7 @@ ACK를 전송 하면 됩니다.
 
 ### ACK가 loss된 경우
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1127/stop%20and%20wait2.PNG">
 
 앞서와 똑같이 이렇게 패킷 0은 왔다 갔다 제대로 동작을 했고,
 
