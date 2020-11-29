@@ -72,7 +72,7 @@ OS를 공부하면서 정리를 한 내용들 입니다.
 
 ## open()
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1129/OPen.PNG">
 
 `open()`이라는 것은 파일의 메타데이터를 메모리로 올려놓는 것 입니다.
 
