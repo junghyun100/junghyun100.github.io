@@ -16,7 +16,7 @@ Go-back-N을 조금 더 자세히 알아봅니다.
 
 ## Go-Back-N
 
-<img src= "">
+<img src= "https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1130/Go-back_N.PNG">
 
 시퀀스 넘버는 패킷의 헤더 부분에 들어가 동작을 합니다.
 
@@ -76,13 +76,13 @@ ACK가 시간 안에 도착 하지 않는다면 해당 부분부터 다시 모�
 
 윈도우 사이즈는 사실 시간에 따라서 계속 변화 할 수 있습니다.
 
-그래서 변화 한다는 의미라고 해서 sliding window라는 말을 사용합니다.
+그래서 변화 한다는 의미라고 해서 `sliding window`라는 말을 사용합니다.
 
-윈도우 사이즈가 크면 클 수록 throughput은 높아집니다.
+윈도우 사이즈가 크면 클 수록 `throughput`은 높아집니다.
 
 한 번에 보낼 수 있는 패킷이 많아 지니까, 
 
-cumulative ACK로 승인을 받을 수 있는 패킷도 많아 지는 것입니다.
+`cumulative ACK`로 승인을 받을 수 있는 패킷도 많아 지는 것입니다.
 
 그렇다고 해서 무조건 윈도우 사이즈가 크다고 좋은 것은 아닙니다.
 
@@ -104,7 +104,7 @@ cumulative ACK로 승인을 받을 수 있는 패킷도 많아 지는 것입니�
 
 ## Go-back-N Operation
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1130/GBN%20operation.PNG">
 
 Go-back-N을 가지고 패킷을 주고 받는 것을 살펴 봅시다. 
 
@@ -138,7 +138,7 @@ ACK 0, ACK 1 이렇게 보낼 수 있고 또는 여기 합쳐서 cumulative ACK�
 
 그런데 이 상황에서 보면 receiver가 패킷을 받아 봤더니 0, 1 다음에 2가 와야 하는데 3이 왔다면?
 
-in-order delivery, 순서에 맞는 전송이 되어야 하는데 맞지 않은 겁니다.
+`in-order delivery`, 순서에 맞는 전송이 되어야 하는데 맞지 않은 겁니다.
 
 그래서 일단 기본적인 go-back-N은 이런 경우에 그냥 순서에 맞지 않는 패킷이 오면 버려 버리게 되어 있습니다.
 
@@ -156,7 +156,7 @@ go-back-N이다 보니까 패킷 2부터 그 이후 3,4,5도는 이전에 전송
 
 ## Selected Repeat
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1130/selected%20repeat.PNG">
 
 Selected Repeat 방식은 발생하면 그 패킷만 다시 재전송 하게 됩니다.
 
@@ -186,15 +186,17 @@ ACK를 보내서 위에는 초록색으로 되어 있습니다.
 
 이 부분은 아직 응용 레벨에 올려 줄 수가 없는게 이 앞 부분이 아직 채워지지 않았기 때문입니다.
 
-TCP는 in-order delivery고 순서가 다 맞게 맞추어 져야 보낼 수 있는 것인데
+TCP는 `in-order delivery`고 순서가 다 맞게 맞추어 져야 보낼 수 있는 것인데
 
 이 앞 부분이 아직 도달하지 않았기 때문에 이 부분은 아직 버퍼에 갖고 있는 것이고 기다리고 있는 상태입니다.
 
-각각 individual ACK, 모든 패킷에 대해서 개별적인 ACK를 사용 한다는 것과
+각각 `individual ACK`, 모든 패킷에 대해서 개별적인 ACK를 사용 한다는 것과
 
 각각의 ACK를 받지 못한 패킷에 대해서 타이머가 개별적으로 설치 되어 있다 하는 것을 알아야 합니다.
 
 ## Selective Repeat Operation
+
+<img src="https://github.com/junghyun100/junghyun100.github.io/blob/master/images/1130/selected%20repeat%20operation.PNG">
 
 Selective repeat이 동작하는 방식을 보시면 앞서 go-back-N과 마찬가지로 윈도우 사이즈는 4로 설정이 되어 있고
 
@@ -215,6 +217,5 @@ TCP는 응용 레벨의 in-order delivery, 순서에 맞는 delivery를 해야 �
 2번이 도달 하지 않은 상태에서 3,4,5번을 올릴 수 없기 때문에,
 
 2번을 기다렸다가 2번이 도달 하고 나면 2번과 3번과 4번과 5번을 다 같이 합쳐서 보낼 수 있게 되겠습니다.
-
 
 ---
