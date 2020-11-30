@@ -196,7 +196,7 @@ TCP는 `in-order delivery`고 순서가 다 맞게 맞추어 져야 보낼 수 �
 
 ## Selective Repeat Operation
 
-<img src="https://github.com/junghyun100/junghyun100.github.io/blob/master/images/1130/selected%20repeat%20operation.PNG">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1130/selected%20repeat%20operation.PNG">
 
 Selective repeat이 동작하는 방식을 보시면 앞서 go-back-N과 마찬가지로 윈도우 사이즈는 4로 설정이 되어 있고
 
