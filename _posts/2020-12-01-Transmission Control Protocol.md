@@ -18,13 +18,13 @@ TCP가 여러 가지 기능들을 제공 하기 위해서는 정보가 있어야
 
 그 정보는 당연히 헤더에 들어 갑니다. 
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1201/TCPsegment.PNG">
 
-윗 부분에 있는 것이 TCP segment header, 아래 부분이 UDP header 입니다.
+윗 부분에 있는 것이 TCP `segment header`, 아래 부분이 `UDP header` 입니다.
 
 UDP의 경우에는 header의 필드가 매우 간단했습니다.
 
-Source port, destination port, length 그리고 checksum이 있습니다. 
+`Source port`, `Destination port`, `Length` 그리고 `Checksum`이 있습니다. 
 
 TCP는 그것보다 훨씬 복잡합니다.
 
@@ -34,15 +34,15 @@ UDP에 비해서 2.5배 정도 긴 헤더 길이를 갖고 있고,
 
 필요한 경우에 옵션 헤더를 더 붙일 수 있게 되어 있습니다.
 
-제일 첫 번째 word는 source port와 destination port.
+제일 첫 번째 word는 `Source port`와 `Destination port`.
 
 Multiplexing, demultiplexing을 제공 하기 위한 필수요소 입니다.
 
 이것은 UDP 하고 동일한 형태입니다. 
 
-다음에 나오는 sequence number나 acknowledgement number입니다.
+다음에 나오는 `Sequence number`나 `Acknowledgement number`입니다.
 
-그 다음으로는 data offset이라는 것이 있습니다.
+그 다음으로는 `Data offset`이라는 것이 있습니다.
 
 이것은 UDP length하고 좀 비슷한 기능을 합니다.
 
@@ -68,7 +68,7 @@ UDP length 같은 경우에는 헤더 길이를 포함 해서 전체 데이터, 
 
 길이가 달라질 수 있기 때문에 date offset을 사용한다는 것입니다.
 
-다음에 res는 reserve의 약자입니다. 
+다음에 `res`는 reserve의 약자입니다. 
 
 다음에 TCP의 담을 정보가 있다고 하면 거기에 담겠다 것 입니다.
 
@@ -76,7 +76,7 @@ UDP length 같은 경우에는 헤더 길이를 포함 해서 전체 데이터, 
 
 Header checksum은 UDP와 동일한 방식의 checksum을 사용합니다.
 
-urgent pointer 라는 것은 예를 들어 설명하겠습니다.
+`Urgent pointer` 라는 것은 예를 들어 설명하겠습니다.
 
 FTP로 파일 전송을 하는 중에, 착각 해서 다른 파일을 보냈다면?
 
@@ -88,9 +88,9 @@ Ctrl + C를 누르면 파일 전송이 중단 되게 되는데
 
 ## Sequence and Acknowledgment Number
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1201/Sequence%20and%20Acknowledgment%20Number.PNG">
 
-TCP나 UDP는 둘 다 segment라는 단위로 나누어서 데이터를 보내게 되는데 maximum segment size를 1000 byte로 했다. 
+TCP나 UDP는 둘 다 segment라는 단위로 나누어서 데이터를 보내게 되는데 `maximum segment size`를 1000 byte로 했다. 
 
 그러면 TCP 프로토콜은 응용에서 내려 준 데이터를 1000 byte 단위로 자릅니다.
 
@@ -126,13 +126,13 @@ TCP에서의 acknowledgment는 receiver가 다음에 받아야 되는 segment의
 
 해당 sequence number가 n이고 데이터 사이즈를 보니까 1000 byte 이라면,
 
-마지막 byte는 n+999였겠죠. N 부터 999 까지 받았단 뜻입니다.
+마지막 byte는 n+999입니다. N 부터 999 까지 받았단 뜻입니다.
 
 acknowledgment number를 사용 할 때는 한 가지 주의해야 할 점이 있는데
 
 처음에 sender가 데이터를 보내는 경우인데 이 때는 이전에 받은 것이 없으니까 acknowledgment number가 의미가 없습니다.
 
-그렇지만 뭔가 들어 있긴 들어 있을 거에요.
+그렇지만 뭔가 들어 있긴 들어 있습니다.
 
 그래서 실제로 acknowledgment number가 의미를 갖기 위해서는,
 
