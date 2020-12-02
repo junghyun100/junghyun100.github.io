@@ -14,7 +14,7 @@ comments: true
 
 ## Usage of Seq & Ack Numbers
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1202/Usage%20of%20Seq.PNG">
 
 Sequence number와 ack number의 사용 방식을 다시 한 번 살펴 봅니다.
 
@@ -46,9 +46,11 @@ host A가 B 한테 말 해 주고 있는 것 입니다.
 
 ## TCP Reliable Data Transfer
 
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1202/TCP%20Reliable%20Data%20Transfer.PNG">
+
 TCP는 IP와 여러가지 네트워크 인터페이스를 기반으로 합니다.
 
-이 부분은 사실 unreliable 한 상태로 에러가 자주 발생 합니다. 
+이 부분은 사실 `unreliable 한 상태`로 에러가 자주 발생 합니다. 
 
 그렇기 때문에 에러가 애플리케이션에 보이지 않도록 TCP가 잘 에러를 숨기고
 
@@ -58,17 +60,17 @@ TCP는 IP와 여러가지 네트워크 인터페이스를 기반으로 합니다
 
 segment들을 하나씩이 아닌 pipeline 방식으로 데이터를 전달
 
-Throughput을 위한, 퍼포먼스를 위한 것
+`Throughput을 위한, 퍼포먼스를 위한 것`
 
 * cumulative acks
 
 데이터 별로, 패킷 별로, segment 별로 하나 하나 보내는 것이 아니라
 
-어떤 ACK를 보내면 그 이전에 보낸 패킷들에 대해서는, 한꺼번에 acknowledgment를 하는 기능
+어떤 ACK를 보내면 그 이전에 보낸 패킷들에 대해서는, `한꺼번에 acknowledgment`를 하는 기능
 
 * single retransmission timer
 
-cumulative acks 사용으로, 모든 segment에 대해서 별도의 타이머를 두지 않기에
+`cumulative acks` 사용으로, 모든 segment에 대해서 별도의 타이머를 두지 않기에
 
 single retransmission timer를 이용해 서비스 제공
 
@@ -80,7 +82,7 @@ go-back-N에서는 순서에 맞지 않는 데이터가 오면,
 
 예를 들어 패킷 2번을 받지 못했을 때, 이후의 패킷들이 오더라도 전부 버립니다. 
 
-그런데 TCP는 버리지는 않습니다.
+그런데 `TCP는 버리지는 않습니다.`
 
 TCP에서는 cumulative ack를 쓰고 single retransmission timer를 쓰지만
 
@@ -98,11 +100,11 @@ TCP 연결의 수신 버퍼는 congestion window가 작고 receive 버퍼가 항
 
 cumulative ack나 transmission timer 하나만 사용 한다는 것은 go-back-N하고 비슷합니다.
 
-그렇기에 두 가지가 좀 절충 된 그런 형태입니다.
+그렇기에 `두 가지가 좀 절충 된 형태`입니다.
 
 ## TCP Flow Control
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1202/TCP%20flow%20control.PNG">
 
 Flow control은 한 마디로 말씀 드리면 Receiver 버퍼가 있는데 그 버퍼 크기를 넘어 서는 데이터 양을 한꺼번에 보내는 것을 막기 위한 기능입니다. 
 
@@ -116,11 +118,11 @@ Flow control은 한 마디로 말씀 드리면 Receiver 버퍼가 있는데 그 
 
 이것은 보통 congestion window에서 제약하는 것 보다는 충분한 양이기 때문에
 
-congestion에 의해서 sliding window로 보내는 window size가 제약을 받는다 이렇게 되어 있습니다.
+congestion에 의해서 sliding window로 보내는 `window size가 제약을 받는다` 이렇게 되어 있습니다.
 
 ## Connection Management
 
-<img src ="">
+<img src ="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1202/Connection%20Management.PNG">
 
 flag에는 어떤 경우에 9가지의 flag가 있지만, 예시에는 6가지가 있습니다. (이유는 3가지는 거의 사용되지 않아서)
 
@@ -132,6 +134,26 @@ URG, ACK, Push, Push, Reset, synchronization, Finale로 각각이 다 한 bit씩
 
 이 부분은 TCP connection을 설립 하고 해제 하고 이런 데 필요한 내용입니다.
 
+### flag 정보
 
+* SYN - 동기화 플래그는 두 호스트 사이의 세 가지 방법 악수를 설정하는 첫 번째 단계로 사용됩니다.
+
+* ACK - 승인 플래그는 패킷의 성공적인 수신을 인정하는 데 사용됩니다.
+
+* FIN - 완성 된 플래그는 보낸 사람들로부터 더 이상 데이터가 없다는 것을 의미합니다.
+
+* URG - 긴급 플래그는 다른 모든 패킷을 처리하기 전에 긴급 패킷을 처리하기 위해 수신기를 알리는 데 사용됩니다. 
+
+* PSH - 푸시 플래그는 플래그와 다소 유사하며 수신기에 버퍼링 대신 수신된 패킷을 처리하도록 지시합니다.
+
+* RST - 패킷이 예상하지 못하는 특정 호스트로 전송되면 재설정 플래그가 수신자에서 보낸 사람에게 전송됩니다.
+
+* ECE - 이 플래그는 TCP 피어가 ECN 이 가능한지 나타내는 책임이 있습니다. 
+
+* CWR - 혼잡 창 감소 플래그는 플래그가 설정된 패킷을 수신했음을 나타내기 위해 송신 호스트에 의해 사용됩니다. 
+
+* NS (실험적) - nonce sum 플래그는 여전히 보낸 사람의 실수로 악의적 인 패킷 은폐로부터 보호하는 데 사용되는 실험 플래그입니다.
+
+<a href="https://www.keycdn.com/support/tcp-flags">TCP Flags</a>
 
 ---
