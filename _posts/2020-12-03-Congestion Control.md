@@ -16,7 +16,7 @@ comments: true
 
 1980년대 이전에 1970년대에 처음 인터넷이 만들어 졌을 때에는
 
-congestion이라는 것에 대한 고려가 없었습니다.
+`congestion`이라는 것에 대한 고려가 없었습니다.
 
 당시에는 연결 되어 있는 node의 수도 작았고,
 
@@ -28,21 +28,21 @@ congestion이라는 것에 대한 고려가 없었습니다.
 
 1980년도에 발표 한 내용에서의 그림입니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1203/NetworkCongestion.PNG">
 
 가로 축이 네트워크에 제공 되는 전체 트래픽의 양,
 
 세로 축이 실제로 목적지까지 잘 전달 되는 트래픽의 양입니다.
 
-capacity 라는 것은 네트워크가 가지고 있는, 
+`capacity` 라는 것은 네트워크가 가지고 있는, 
 
 전달 할 수 있는 최대의 용량이라는 것입니다.
 
 제공 되는 트래픽에 따라서 얼마나 전달이 되느냐 살펴 보니
 
-offered load가 작을 때는 네트워크에 트래픽들이 잘 도달 했습니다.
+`offered load`가 작을 때는 네트워크에 트래픽들이 잘 도달 했습니다.
 
-offered load와 effective load가 linear하게 증가 하다가 
+`offered load`와 `effective load`가 linear하게 증가 하다가 
 
 어느 순간이 되면 조금씩 낮아집니다.
 
@@ -50,7 +50,7 @@ offered load와 effective load가 linear하게 증가 하다가
 
 결국은 트래픽이 굉장히 많아지면 전달하지 못하게 되고, 
 
-실제 전달 되는 양이 0으로 줄어들어 버리는 문제가 발생했습니다.
+실제 전달 되는 양이 `0`으로 줄어들어 버리는 문제가 발생했습니다.
 
 ## Why?
 
@@ -66,13 +66,13 @@ offered load와 effective load가 linear하게 증가 하다가
 
 결국은 점점 아무 것도 전달 하지 못하는 현상이 발생 하는 것입니다.
 
-congestion으로 인해서 전달 되는 데이터 양이 무너져 버리는 현상에
+`congestion`으로 인해서 전달 되는 데이터 양이 무너져 버리는 현상에
 
-congestion collapse라는 용어를 사용 했습니다.
+`congestion collapse`라는 용어를 사용 했습니다.
 
 ## Different from flow Control
 
-flow control와의 차이점으론 flow control은 point-to-point 이슈, 
+`flow control`와의 차이점으론 flow control은 `point-to-point 이슈`, 
 
 그러니까 sender와 receiver 간의 문제 라는 것입니다.
 
@@ -80,17 +80,19 @@ Flow control은 receiver의 송신 버퍼의 크기를 넘어서는 속도로,
 
 sender가 보내지 않도록 합니다.
 
-Receive window의 헤더에 비어 있는 receive buffer 크기를,
+`Receive window`의 헤더에 비어 있는 `receive buffer 크기`를,
 
 알려 줌으로써 flow control은 해결이 되었습니다.
 
-congestion control은 1:1의 문제가 아니라 
+`congestion control`은 1:1의 문제가 아니라 
 
 해당 네트워크를 공유하고 있는 모든 node들이 양보를 해야 합니다.
 
 즉, 전체가 관련 된 글로벌한 이슈입니다.
 
 # Congestion Control Approaches
+
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1203/Congestion%20Control%20Approaches.PNG">
 
 Congestion control은 여러 가지 방법들이 제안 되었습니다.
 
@@ -112,7 +114,7 @@ Congestion control은 여러 가지 방법들이 제안 되었습니다.
 
 congestion 메커니즘을 수행 하겠다는 것입니다.
 
-end-to-end 방식은 대표적인 것이 TCP입니다.
+end-to-end 방식은 대표적인 것이 `TCP`입니다.
 
 ### network-assisted 방식
 
@@ -120,13 +122,13 @@ end-to-end 방식은 대표적인 것이 TCP입니다.
 
 이 라우터가 호스트들한테 `지금 혼잡이 일어나고 있으니까 얼마로 줄이세요`라고 
 
-라우터가 정보를 알려 주는 것이 network-assisted 방식 입니다.
+라우터가 정보를 알려 주는 것이 `network-assisted 방식` 입니다.
 
 이렇게 하려면 사실 여러 가지 복잡한 문제가 있기 때문에 TCP에서는 end-to-end 방식을 씁니다.
 
-network-assisted 방식은 대표적인 것이 ATM입니다.
+network-assisted 방식은 대표적인 것이 `ATM`입니다.
 
-TCP 헤더에 flag 중에 하나를 사용 하면 Explicited Congestion Notification이라고 해서
+TCP 헤더에 flag 중에 하나를 사용 하면 `Explicited Congestion Notification`이라고 해서
 
 중간의 라우터가 지금 congestion이 어느 정도 발생하고 있다는 것을 알려 줄 수는 있습니다.
 
