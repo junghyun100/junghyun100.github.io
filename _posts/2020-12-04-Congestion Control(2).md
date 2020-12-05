@@ -56,9 +56,7 @@ AIMD(Additive Increase Multiplicative Decrease)에서
 
 네트워크가 congestion을 일으키지 않는 한도 내에서
 
-최대한으로 한꺼번에 보낼 수 있는 ACK를 받지 않은 상태로 
-
-한꺼번에 전송 할 수 있는 데이터의 양 입니다.
+ACK를 받지 않은 상태로 한꺼번에 전송 할 수 있는 데이터의 양 입니다.
 
 그림에서는 노란색을 뜻하는 것입니다.
 
@@ -72,17 +70,17 @@ Network congestion의 상황에 따라서 다양하게 변화 하는 것을 볼 
 
 <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1204/Change%20of%20cwnd.PNG">
 
-처음에 연결을 수립하고 나면 처음에는 `congestion window size`를 어떤 값으로 보내야 될지 모릅니다.
+처음에 연결을 수립하고 나면 `congestion window size`를 어떤 값으로 보내야 될지 모릅니다.
 
 그래서 초기 congestion size 는 1 MSS. 이 말은 한 개의 segment를 보낼 수 있다는 것입니다.
 
-그래서 호스트 A가 처음에 연결이 처음이 수립 되고 나면 한 개의 segment를 보내고,
+그래서 호스트 A가 처음에 연결이 수립 되고 나면 한 개의 segment를 보내고,
 
 호스트 B는 잘 받으면 거기에 대한 ACK를 보내게 됩니다.
 
 이 ACK를 받고 나면 호스트 A는 아까 보낸 데이터가 잘 도달 했으니까 
 
-이번에는 이것의 두 배를 보내 볼까 이렇게 생각을 합니다.
+이번에는 이것의 두 배를 보내 볼까 하고 생각을 합니다.
 
 그래서 거기에 두 개의 segment를 보내게 되고, 호스트 B는 거기에 대해서 ACK를 보내게 됩니다.
 
@@ -100,25 +98,25 @@ Initial rate는 굉장히 낮지만 이것은 굉장히 빠르게 증가하는 �
 
 모든 node들이 exponential하게 window size를 늘리게 되면, 
 
-결국은 congestion이 금방 발생 할 것이고, 메커니즘을 수행해야 되고 하는것이 번거로웠습니다.
+결국은 congestion이 금방 발생 할 것이고, 이것을 해결하기 위한 메커니즘을 수행해야 하는 것이 번거로웠습니다.
 
-그래서 `congestion avoidance`라는 congestion을 회피하고자 하는 이런 방식을 도입 했습니다.
+그래서 `congestion avoidance`라는 congestion을 회피하는 방식을 도입 했습니다.
 
 <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1204/Change%20of%20cwnd%20-%20Congestion%20Avoidance.PNG">
 
 이것은 slow-start의 지수적인 증가가 언제까지 이루어질 것이냐,
 
-congestion이 금방 또 발생 할 것이니까, 이전에 congestion window size가 있었을 것입니다.
+congestion이 금방 또 발생 할 것이니까, 이전에 congestion window size를 이용합니다.
 
-loss가 일어나기 이전 값의 절반인 congestion window size의 절반을 
+loss가 일어나기 이전 congestion window size값의 절반을 
 
 `slow-start threshold` 라는 값으로 설정을 합니다.
 
 그러면 congestion window size가 1에서 2로, 4로, 8로 증가 하다가
 
-slow-start threshold 값, 이전 congestion이 발생하기 이전의 절반 값에 도달 하면
+slow-start threshold 값(congestion이 발생하기 이전의 절반 값)에 도달 하면
 
-그 때부터는 Additive Increase 방식으로 이렇게 1씩 증가 합니다. 
+그 때부터는 Additive Increase 방식으로 1씩 증가 합니다. 
 
 그래서 ssthresh(slow-start threshold)를 넘어가게 되면 congestion window size 값을 
 
