@@ -18,19 +18,19 @@ comments: true
 
 전체적인 개요는 그림과 같이 구성 되어 있습니다.
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1209/Router%20Architecture%20Overview.PNG">
 
-중간에 포워딩을 해 주는 High-speed switching fabric 장치가 있습니다.
+중간에 포워딩을 해 주는 `High-speed switching fabric` 장치가 있습니다.
 
 시스템에 따라서 다른 방식으로 구현 되기도 합니다.
 
-왼쪽 편에는 외부에서 라우터로 데이터가 들어 오는 input port가 있습니다.
+왼쪽 편에는 외부에서 라우터로 데이터가 들어 오는 `input port`가 있습니다.
 
-그리고 오른 쪽에는 output port가 있습니다.
+그리고 오른 쪽에는 `output port`가 있습니다.
 
-간략하게 말하자면 input port로 들어온 데이터가 
+간략하게 말하자면 `input port로 들어온 데이터`가 
 
-어느 output port로 나가야 하는지 결정 해 주는게 switching fabric의 역할입니다.
+어느 `output port로 나가야 하는지 결정` 해 주는게 `switching fabric`의 역할입니다.
 
 그리고 input으로 들어온 어떤 datagram이 output으로 나가는 데 
 
@@ -44,13 +44,13 @@ comments: true
 
 # Input Port Function
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1209/Input%20Port%20function.PNG">
 
 Input port의 기능을 3가지로 나누어 보면 Physical Layer, Data Link Layer, Decentralized switching이 있습니다.
 
-Physical Layer는 유선이나 무선 링크를 통해서 전달되어 오는 정보를 1인지 0인지 구별 해 주는 그런 역할을 합니다.
+<strong>Physical Layer</strong>는 유선이나 무선 링크를 통해서 전달되어 오는 정보를 1인지 0인지 구별 해 주는 그런 역할을 합니다.
 
-Data Link Layer는 1과 0로 구별이 된 데이터들을 이용해 에러 체크를 하는 등의 역할을 합니다.
+<strong>Data Link Layer</strong>는 1과 0로 구별이 된 데이터들을 이용해 에러 체크를 하는 등의 역할을 합니다.
 
 > 데이터 링크 계층에서의 가장 대표적인 프로토콜이 이더넷(ethernet)입니다.
 
@@ -60,15 +60,15 @@ Data Link Layer는 1과 0로 구별이 된 데이터들을 이용해 에러 체�
 
 중간에 switching fabric이 처리해야 될 데이터가 많다거나 하면 데이터를 저장 해 둡니다.
 
-이것을 input queue라고 합니다.
+이것을 `input queue`라고 합니다.
 
 되도록이면 queue에 쌓이지 않도록 fabric이 처리 할 수 있도록 해야 됩니다.
 
 # Input Port Queuing
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1209/Input%20Port%20Queuing.PNG">
 
-switch fabric이 빨리 처리 하지 못한다면 어쩔 수 없이 queuing이 저장 되는 지연 시간을 좀 겪게 됩니다.
+`switch fabric`이 빨리 처리 하지 못한다면 어쩔 수 없이 `queuing`이 저장 되는 지연 시간을 좀 겪게 됩니다.
 
 그런 일을 방지하기 위해서는 기본적으로 라우터를 설계 함에 있어서 중간의 switch fabric의 처리 속도가
 
@@ -78,15 +78,15 @@ switch fabric이 빨리 처리 하지 못한다면 어쩔 수 없이 queuing이 
 
 ### HOL blocking
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1209/Input%20Port%20Queuing.PNG">
 
-input port에서 겪는 지연 중에 HOL blocking 지연이라고 부르는 것이 있습니다.
+input port에서 겪는 지연 중에 <strong>HOL blocking 지연</strong>이라고 부르는 것이 있습니다.
 
-아래쪽 그림에서 보시면 각각의 datagram이 색 별로 구분 되어 있습니다.
+아래쪽 그림에서 보시면 각각의 `datagram`이 색 별로 구분 되어 있습니다.
 
 색은 어느 output port로 나가야 하는가를 표현하고 있습니다.
 
-여기서 첫 번째 input port에 있는 첫 번째 데이터와 세 번째 input port에 있는 세 번째 데이터가 
+여기서 `첫 번째 input port에 있는 첫 번째 데이터`와 `세 번째 input port에 있는 세 번째 데이터`가 
 
 똑같이 빨간색으로 나가야 합니다.
 
@@ -98,6 +98,6 @@ input port에서 겪는 지연 중에 HOL blocking 지연이라고 부르는 것
 
 앞에 있는 데이터 때문에 빠져나가지 못하게 됩니다. 
 
-이런 것을 HOL blocking(Head-of-the-Line blocking)이라고 이야기 합니다.
+이런 것을 <strong>HOL blocking(Head-of-the-Line blocking)</strong>이라고 이야기 합니다.
 
 ---
