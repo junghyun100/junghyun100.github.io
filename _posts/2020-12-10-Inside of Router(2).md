@@ -66,7 +66,7 @@ IP 헤더 주소를 보고 목적지 주소가 있는 포트쪽으로 내보냅�
 
 직접 복사가 일어나기 때문에 <strong>훨씬 빠르게 처리</strong> 할 수 있습니다.
 
-만약에 그림처럼 input buffer가 여러 개와 output buffer가 여러 개가 있으면 
+만약에 그림처럼 input buffer 여러 개와 output buffer가 여러 개가 있으면 
 
 이들 사이에 input buffer 측에서 어느 output buffer로도 갈 수 있어야 하기 때문에
 
@@ -110,9 +110,7 @@ IP 헤더 주소를 보고 목적지 주소가 있는 포트쪽으로 내보냅�
 
 `crossbar switch`는 모든 input과 모든 output에 하나하나의 switch를 다 두었습니다.
  
-Input port가 3개 이고 output port가 3개 이면 input port의 개수가 n이고 
-
-output port의 개수가 m이면 n 곱하기 m 만큼의 switch가 필요 합니다.
+input port의 개수가 n이고, output port의 개수가 m이면 n 곱하기 m 만큼의 switch가 필요 합니다.
 
 그러나 banyan 네트워크의 특징은 crossbar switch처럼 <strong>많은 switch가 필요 하지 않습니다.</strong>
 
@@ -122,7 +120,7 @@ crossbar switch 방식에서는 8 * 8 = 64, 64개의 switch가 필요하지만
 
 banyan 네트워크 방식은 오른쪽 그림처럼 중간에 레벨을 두어 구성하므로써,
 
-switch의 개수가 적기 때문에 비용적인 측면에서는 저렴하지만 
+switch의 개수가 적기 때문에 비용적인 측면에서는 저렴하지만, 
 
 <strong>HOL blocking을 겪을 수 있는 확률</strong>이 좀 더 높아질 수가 있겠습니다.
 
