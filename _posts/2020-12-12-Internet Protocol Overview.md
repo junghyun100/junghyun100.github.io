@@ -14,15 +14,15 @@ comments: true
 
 # Internet Layer
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1212/InternetLayer.PNG">
 
-인터넷 계층의 주 역할은 라우팅과 포워딩입니다. 
+인터넷 계층의 주 역할은 `라우팅`과 `포워딩`입니다. 
 
 라우팅 일을 하는 프로토콜들은 그림의 오른쪽에 약자로 적혀있습니다.
 
 이 라우팅 프로토콜들이 공통적으로 하는 일은 
 
-소스로부터 목적지까지 길을 결정 해 주는 역할입니다.
+<strong>소스로부터 목적지까지 길을 결정 해 주는 역할</strong>입니다.
 
 라우팅 프로토콜들, 라우팅 알고리즘들이 동작 하기 위해서는 
 
@@ -40,21 +40,21 @@ IP 프로토콜이 제공하는 정보가 필요합니다.
 
 IP에서도 에러가 발생 하면, 라우터들이 알려 주어야 하는데 
 
-ICMP(Internet Control Message Protocol)가 그 역할을 담당합니다.
+`ICMP(Internet Control Message Protocol)`가 그 역할을 담당합니다.
 
 # IP Datagram Format
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1212/IP%20datagram%20format.PNG">
 
 그림은 IP 데이터그램의 헤더 형태 입니다. 
 
-TCP와 유사하게 전체 기본적인 헤더가 20 byte의 길이를 갖습니다.
+TCP와 유사하게 전체 기본적인 헤더가 `20 byte`의 길이를 갖습니다.
 
 선택적인 옵션 헤더가 더 붙을 수도 있습니다.
 
 ### Version
 
-첫 번째 필드는 version인데 4 bit 길이를 갖습니다.
+첫 번째 필드는 `version`인데 4 bit 길이를 갖습니다.
 
 인터넷 프로토콜 버전을 어떤 버전을 쓰느냐를 나타냅니다.
 
@@ -62,9 +62,9 @@ TCP와 유사하게 전체 기본적인 헤더가 20 byte의 길이를 갖습니
 
 ### Header length
 
-다음에 header length가 있습니다. 
+다음에 `header length`가 있습니다. 
 
-UDP의 경우 옵션이 없었기에 명확하게 8byte 헤더를 갖기 때문에 없었다면,
+`UDP`의 경우 옵션이 없었기에 명확하게 `8byte 헤더`를 갖기 때문에 없었다면,
 
 TCP나 IP의 경우에는 옵션으로 인해 헤더가 어느 정도의 길이인지 
 
@@ -72,7 +72,7 @@ TCP나 IP의 경우에는 옵션으로 인해 헤더가 어느 정도의 길이�
 
 ### Type of Service
 
-type of service라는 것은 type of data, 
+`type of service`라는 것은 `type of data`, 
 
 멀티미디어 데이터인지, 실시간성이 필요한 데이터인지와 같이
 
@@ -80,11 +80,11 @@ type of service라는 것은 type of data,
 
 ### Length
 
-length는 전체 데이터그램의 길이를 뜻합니다.
+`length`는 전체 데이터그램의 길이를 뜻합니다.
 
 ### 16-bit Identifier, Flag, Fragment Offset
 
-다음에 세 개의 필드 (16-bit identifier, flag, fragment offset)은
+다음에 세 개의 필드(16-bit identifier, flag, fragment offset)은
 
 라우터가 너무 큰 segment를 데이터그램으로 분할하고,
 
@@ -92,7 +92,7 @@ length는 전체 데이터그램의 길이를 뜻합니다.
 
 ### TTL
 
-다음은 TTL(Time To Live) 입니다. 
+다음은 `TTL(Time To Live)` 입니다. 
 
 TTL은 도착할 때 까지 최대 몇 hop을 거칠 수 있는지 정하는 필드입니다.
 
@@ -106,7 +106,7 @@ TTL은 도착할 때 까지 최대 몇 hop을 거칠 수 있는지 정하는 필
 
 ### Upper Layer
 
-upper layer 라는 것은, 트랜스포트 계층에서의 프로토콜이 무엇인가를 의미합니다.
+`upper layer` 라는 것은, 트랜스포트 계층에서의 프로토콜이 무엇인가를 의미합니다.
 
 TCP 또는 UDP Seement가 들어가고, 목적지에선 TCP 또는 UDP 처리부 중
 
@@ -114,9 +114,9 @@ TCP 또는 UDP Seement가 들어가고, 목적지에선 TCP 또는 UDP 처리부
 
 ### Header Checksum
 
-마지막으로 header checksum이라는 것은
+마지막으로 `header checksum`이라는 것은
 
-CRC(Cyclical Redundancy Check)라는 방식으로
+`CRC(Cyclical Redundancy Check)`라는 방식으로
 
 데이터를 담아서 전달을 하면, 헤더가 정확한지 아닌지 알 수 있습니다.
 
@@ -128,15 +128,15 @@ CRC(Cyclical Redundancy Check)라는 방식으로
 
 # IP Fragmentation & Reassembly
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1212/IP%20fragmentation%2C%20reassembly%20.PNG">
 
-그림으로 예를 들면 source쪽 네트워크는 최대 사이즈 4000 byte를 지원 하는 네트워크입니다.
+그림으로 예를 들면 source쪽 네트워크는 `최대 사이즈 4000 byte를 지원 하는 네트워크`입니다.
 
 4000 byte 크기의 데이터가 전송되어 날아가고 있습니다. 
 
-이 라우터의 다음은 이더넷을 사용하는, 최대 사이즈 1500 byte를 지원하는 네트워크로 바뀐다면,
+이 라우터의 다음은 이더넷을 사용하는, `최대 사이즈 1500 byte를 지원하는 네트워크`로 바뀐다면,
 
-IP 프로토콜로 4000 byte 짜리를 잘게 나누어야 된다는 것입니다.
+IP 프로토콜로 4000 byte 짜리를 <strong>잘게 나누어야 된다</strong>는 것입니다.
 
 세 개의 프레임으로 나누어서 보내야 된다는 것입니다. 
 
@@ -144,15 +144,15 @@ IP 프로토콜로 4000 byte 짜리를 잘게 나누어야 된다는 것입니�
 
 빨간 부분을 잘게 세 개로 나눠서 각각에 헤더를 붙여서 전달을 하게 해야 됩니다.
 
-이것이 fragmentation & reassembly의 역할이라는 것입니다.
+이것이 `fragmentation & reassembly`의 역할이라는 것입니다.
 
-그래서 네트워크 링크나 링크 계층에서는 maximum transfer unit, maxium transfer size가 
+그래서 네트워크 링크나 링크 계층에서는 `maximum transfer unit`, `maxium transfer size`가 
 
 정해져 있고, 링크 레벨에 의해서 제약을 받게 됩니다.
 
 그래서 이더넷이나 FDDI나 서로 다른 방식의 링크 프로토콜을 사용하게 되면,
 
-허용하는 MTU, 최대 전송 사이즈가 달라지게 됩니다.
+허용하는 `MTU`, 최대 전송 사이즈가 달라지게 됩니다.
 
 그래서 큰 데이터그램을 지원하던 네트워크에서 작은 크기의 데이터그램을 지원하는 네트워크로 
 
@@ -162,6 +162,6 @@ IP 프로토콜로 4000 byte 짜리를 잘게 나누어야 된다는 것입니�
 
 그런 제약이 있는 것이고 이를 위해서 IP 헤더에 몇 가지 정보를 담도록 했습니다.
 
-그것이 16-bit identifier, flag, fragment offset입니다.
+그것이 `16-bit identifier`, `flag`, `fragment offset`입니다.
 
 ---
