@@ -76,7 +76,7 @@ manufacturing을 위한 빌딩 또는 재무, 경영 담당 등으로
 
 이 서브넷에 도착 할 수 있게끔 서브넷을 잘게 나누고 싶다는 뜻입니다.
 
-<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/blob/master/images/1215/Subnet%20Mask%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.PNG">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1215/Subnet%20Mask%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.PNG">
 
 > 주소를 class B 주소로 가정합니다.
 
