@@ -16,9 +16,9 @@ comments: true
 
 <img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1216/CIDR.PNG">
 
-서브넷하고 반대되는 개념인 <strong>CIDR</strong>은 <strong>Classless Inter-Domain Routing<strong>의 약자입니다.
+서브넷하고 반대되는 개념인 <strong>CIDR</strong>은 <strong>Classless Inter-Domain Routing</strong>의 약자입니다.
 
-이것은 서브넷하고 반대인 <strong>supernetting<strong> 이라는 이름으로 부르기도 합니다. 
+이것은 서브넷하고 반대인 <strong>supernetting</strong> 이라는 이름으로 부르기도 합니다. 
 
 ### 왜 사용을 하는가?
 
