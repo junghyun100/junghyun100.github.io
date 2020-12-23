@@ -14,7 +14,7 @@ comments: true
 
 # Two Key Functions in Network Layer
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1223/two%20key%20functions%20in%20Network%20Layer.PNG">
 
 네트워크 레이어의 두 가지 핵심적인 기능으로
 
@@ -40,7 +40,7 @@ comments: true
 
 # Per-router Control Plane
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1223/Per-router%20Control%20Plane.PNG">
 
 Tranditional network에서는 라우팅 알고리즘이 라우터마다 별도로 수행이 됩니다.
 
@@ -52,7 +52,7 @@ Tranditional network에서는 라우팅 알고리즘이 라우터마다 별도�
 
 # Logically Centralized Control Plane
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1223/Logically%20Centralized%20Control%20Plane.PNG">
 
 SDN에서는 외부에서 모든 라우터들이 가지는 정보를 수집 한 뒤,
 
@@ -100,7 +100,7 @@ u, v, w, x, y, z 이런 것들은 라우터,
 
 # Path Cost
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1223/Path%20Cost.PNG">
 
 어떤 경로를 선택하는데 있어서 코스트가 들기 마련입니다.
 
@@ -128,7 +128,7 @@ hop 수가 적은 것이 좋다고 판단한 것입니다.
 
 라우팅 알고리즘 분류 방식에는 크게 두 가지가 있을 수 있습니다.
 
-<img src="">
+<img src="https://github.com/junghyun100/junghyun100.github.io/blob/master/images/1223/Routing%20Algorithm%20classification.PNG">
 
 하나는 static과 dynamic으로 분류하는 방법입니다.
 
