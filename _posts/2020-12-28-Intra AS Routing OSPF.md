@@ -74,7 +74,7 @@ comments: true
 
 # Internet Approach to Scalable Routing
 
-<img src="https://github.com/junghyun100/junghyun100.github.io/blob/master/images/1228/Internet%20Approach%20to%20Scalable%20Routing.PNG">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/1228/Internet%20Approach%20to%20Scalable%20Routing.PNG">
 
 `AS`를 정의를 하고 나면 라우팅을 
 
