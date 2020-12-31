@@ -63,6 +63,7 @@ comments: true
 <strong>network prefix</strong>와 <strong>AS-PATH</strong> 정보 입니다.
 
 > 정보의 내용 1. AS3와 X를 거치면 그 네트워크로 갈 수 있다는 것
+
 > 정보의 내용 2. NEXT-HOP은 2c라는 것
 
 이를 통해 기본적인 BGP는 동작을 살펴 보았습니다.
