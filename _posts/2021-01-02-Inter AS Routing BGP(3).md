@@ -42,7 +42,7 @@ IP 주소 클래스에 `A`, `B`, `C class`는
 
 ### Anycast
 
-<img src="https://commons.wikimedia.org/wiki/File:Anycast.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Anycast.svg/1280px-Anycast.svg.png">
 
 <strong>Anycast</strong>는 source가 하나고, destination이 여러 개인 경우 중 하나만이 데이터를 받습니다.
 
