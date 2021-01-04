@@ -92,6 +92,10 @@ distance vector로 vector 알고리즘을 통해서
 
 유연하게 할 수는 없었습니다.
 
+# Logically Centralized Control Plane
+
+<img src="">
+
 이제는 이 라우터들을 programmable하게 만듭니다. 
 
 그래서 원하는 라우팅 알고리즘을 넣을 수 있게끔,
