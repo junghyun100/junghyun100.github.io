@@ -14,61 +14,61 @@ comments: true
 
 # Link Layer Terminologies
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/2021%EB%85%84/0111/Link%20Layer%20Terminologies.PNG">
 
-Node는 네트워크의 호스트나 라우터를 뜻합니다.
+<strong>Node</strong>는 네트워크의 `호스트`나 `라우터`를 뜻합니다.
 
-Link 또는 media는 호스트와 라우터같은 
+<strong>Link 또는 media</strong>는 호스트와 라우터같은 
 
 서로 이웃한 두 개의 노드를 연결 해 주는
 
-물리적인 어떤 연결을 뜻 합니다.
+`물리적인 어떤 연결`을 뜻 합니다.
 
-그리고 링크 또는 미디어는 
+그리고 Link 또는 media는 
 
-wired Link와 wireless Link로 구분 합니다.
+`wired Link`와 `wireless Link`로 구분 합니다.
 
-Frame은 링크 레이어에 생성 되는 패킷입니다.
+<strong>Frame</strong>은 `링크 레이어`에 생성 되는 `패킷`입니다.
 
-이 Frame은 3계층의 패킷인 Datagram을 
+이 <strong>Frame</strong>은 3계층의 패킷인 `Datagram`을 
 
-품고 있는 encapsulate된 형태를 띕니다.
+품고 있는 `encapsulate`된 형태를 띕니다.
 
 # Link Layer Basic Functions
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/2021%EB%85%84/0111/Link%20Layer%20Basic%20Functions.PNG">
 
-링크 레이어는 어떤 역할을 맡고 있는가 봅니다.
+이번엔 링크 레이어는 어떤 역할을 맡고 있는가 살펴봅니다.
 
-physically adjacent라고 되어있습니다.
+<strong>physically adjacent</strong>라고 되어있습니다.
 
-뜻은 "물리적으로 서로 연결 되어 있는"으로
+뜻은 <strong>"물리적으로 서로 연결 되어 있는"</strong>으로
 
 물리적으로 연결 되어 있는 두 개의 노드 사이에서 
 
-데이터그램을 전달 해 주는 역할을 합니다.
+`데이터그램을 전달 해 주는 역할`을 합니다.
 
 그래서 오른편의 그림을 보시면 
 
-sending machine과 receiving machine이 있는데
+`sending machine`과 `receiving machine`이 있는데
 
 물리적으로 유선으로 연결이 되어 있거나 아니면 
 
 둘 사이가 무선 채널이 닿을 수 있는 거리에 있습니다.
 
-그리고 둘 사이에서 payload 부분에 
+그리고 둘 사이에서 `payload` 부분에 
 
-3계층의 데이터그램이 들어가고 
+3계층의 `datagram`이 들어가고 
 
-데이터그램의 헤더와 트레일러를 붙여서 프레임을 만든 뒤 
+`datagram`의 `헤더`와 `트레일러`를 붙여서 `프레임`을 만든 뒤 
 
 물리 링크를 통해서 실제로 전달 하게 됩니다.
 
 이렇게 전달 되는 과정에서 
 
-비트 에러가 발생 할 수 있기 때문에 
+`비트 에러`가 발생 할 수 있기 때문에 
 
-링크 레이어에서는 bit error handling이 
+링크 레이어에서는 `bit error handling`이 
 
 하나의 중요한  기능이 됩니다.
 
@@ -76,9 +76,9 @@ sending machine과 receiving machine이 있는데
 
 만약에 무선으로 연결 되었다고 하면 
 
-receiving machine과 통신 할 수 있는 
+`receiving machine`과 통신 할 수 있는 
 
-다른 machine들 있을 수 있기 때문에
+다른 `machine`들 있을 수 있기 때문에
 
 같은 채널을 쓸 경우 동시에 전송을 하게 되면 
 
@@ -88,9 +88,9 @@ receiving machine과 통신 할 수 있는
 
 # Data Transmission Base
 
-<img src="">
+<img src="https://raw.githubusercontent.com/junghyun100/junghyun100.github.io/master/images/2021%EB%85%84/0111/Data%20Transmission%20Base.PNG">
 
-링크 레이어 기술은 데이터 전송의 기반이라고 말 할 수 있습니다.
+`링크 레이어 기술`은 데이터 전송의 기반이라고 말 할 수 있습니다.
 
 실제 네트워크를 봤을 때 여러 호스트들이 서로 연결 되어 있습니다.
 
@@ -98,13 +98,13 @@ receiving machine과 통신 할 수 있는
 
 서로 다른 기술로 이루어 질 수 있습니다.
 
-IP의 역할은 서로 다른 형태의 네트워크들을 통합해서 
+`IP의 역할`은 서로 다른 형태의 네트워크들을 통합해서 
 
 전 세계를 아우르는 하나의 가상의 통합 네트워크를 만드는 것이고,
 
-IP를 가지고 목적지 네트워크를 찾아 갈 수 있습니다.
+`IP`를 가지고 `목적지 네트워크`를 찾아 갈 수 있습니다.
 
-그리고 이 과정에서 실제로 목적지 receiving host가 포함 되어 있는 
+그리고 이 과정에서 실제로 목적지 `receiving host`가 포함 되어 있는 
 
 호스트에게 데이터를 전달 하기 위해서는 여러가지 링크 레이어 기술을 사용 해야만 
 
