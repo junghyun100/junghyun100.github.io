@@ -20,7 +20,7 @@ comments: true
 
 이번에는 이 데이터를 전달 받은 `receiver`는 이제 어떻게 하는지 살펴봅니다.
 
-  ![CRC Principle_Receiver](/images/2021년/0115/CRC Principle_Receiver.PNG)
+<img src="/images/2021년/0115/CRC Principle_Receiver.PNG">
 
 그림의 오른쪽을 예로 봅니다.
 
@@ -46,7 +46,7 @@ comments: true
 
 # Error Correction
 
-  ![Error Correction](/images/2021년/0115/Error Correction.PNG)
+<img src="/images/2021년/0115/Error Correction.PNG">
 
 그래서 에러를 실제로 수정 할 수 있는 방법이 있지 않을까 고민을 했고
 
@@ -90,7 +90,7 @@ comments: true
 
 # FEC : Hamming Code
 
-  ![FEC : Hamming Code](/images/2021년/0115/FEC_Hamming Code.PNG)
+<img src="/images/2021년/0115/FEC_Hamming Code.PNG">
 
 <strong>FEC 기술</strong> 중에서 또 많이 쓰이는 기술이 <strong>hamming code</strong>라는 기술입니다.
 
@@ -138,7 +138,7 @@ comments: true
 
 # FEC : Hamming Code(2)
 
-  ![FEC : Hamming Code2](/images/2021년/0115/FEC_Hamming Code2.PNG)
+<img src="/images/2021년/0115/FEC_Hamming Code2.PNG">
 
 `5 bit`를 보냈을 때, `5 bit`로 표현 할 수 있는 코드워드는 `2의 5승`으로 `32가지` 입니다.
 
