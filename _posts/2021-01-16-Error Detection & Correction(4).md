@@ -22,6 +22,8 @@ comments: true
 
 `hamming code`와 `convolutional code`의 차이를 살펴 보면
 
+## hamming code
+
 <strong>hamming code</strong>는 데이터 블록 단위로 `코드워드`로 대체가 되어서 전송 됩니다.
 
 그럼으로써 에러가 발생 했을 때 원래 데이터가 무엇이었는지 찾아내는 방식이
@@ -32,11 +34,15 @@ comments: true
 
 적용하기가 매우 힘들어 집니다.
 
+## convolutional code
+
 <strong>convolutional code</strong>라는 것은 매 비트를 전송하려는 코드워드로 바꿀 때 
 
 <strong>이전의 히스토리</strong>가 현재 비트를 전송하려는 코드로 변경 시키는데도 
 
 영향을 주게 됩니다.
+
+## For example
 
 그래서 예를 들면 오른쪽에 있는 형태의 코드워드를 만들 수가 있게 됩니다.
 
