@@ -108,7 +108,7 @@ comments: true
 
 인터페이스 카드를 갖고 주소도 두 개씩 갖게 됩니다.
 
-<img src="ARP_Routing to Another LAN2">
+<img src="/images/2021년/0119/ARP_Routing to Another LAN2.PNG">
 
 `A`라는 컴퓨터는 `R` 라우터의 `IP` 주소와 `MAC` 주소를 알고 있고
 
