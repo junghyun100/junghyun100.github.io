@@ -186,6 +186,51 @@ public class UserController {
 
 ```
 
+* @ApiModel 
+
+		어떤 객체에 대해서 작성 할 것인가에 대해서 정해주는 어노테이션입니다.
+
+* @ApiModelProperty
+
+		객체의 필드 내용을 작성하는 어노테이션입니다.
+		작성한 내용은 API에서 확인이 가능합니다.
+        * value - 파라메터 이름
+        * name - Swagger에서 입력 받을 리얼 파라메터 명
+        * notes - 부가설명
+        * example - 지정된 임의 테스트 값을 입력 함
+        * required - 필수 입력 여부
+
+* @JsonForamt
+
+		해당 어노테이션은 Date 타입인 reg_date를 JsonFormat으로 변경합니다.
+		계층간의 데이터를 주고 받을 때 Json형식으로 주고받기 때문에 Format을 변경해주지 않으면 
+  	Date 값이 전달이 되지가 않습니다.
+
+```java
+
+@Data
+@NoArgsConstructor
+@Entity
+@ApiModel
+public class Post {
+	public Post(String title) {
+		this.title = title;
+	}
+	
+	@Id
+	@GeneratedValue
+	@ApiModelProperty(value="아이디")
+	private Long id;
+	
+	@ApiModelProperty(required = true, value="제목")
+	private String title;
+	
+	@ApiModelProperty(required = true, value="내용")
+	private String content;
+}
+
+```
+
 ### 확인
 
 <a href="http://localhost:8080/swagger-ui.html"> http://localhost:8080/swagger-ui.html </a>
