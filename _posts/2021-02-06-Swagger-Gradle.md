@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swagger-Gradle"
-tags: [JPA]
+tags: [Swagger]
 comments: true
 
 ---
