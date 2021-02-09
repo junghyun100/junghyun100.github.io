@@ -106,6 +106,7 @@ return query.selectFrom(coupon)
 ```
 위와 같은 상황에서 다음과 같이 제약조건을 조립할 수 있다. 
 - (가독성과 재사용성)
+
 ```java
 return query.selectFrom(coupon)
             .where(
