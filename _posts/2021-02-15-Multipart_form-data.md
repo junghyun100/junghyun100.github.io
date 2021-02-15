@@ -70,7 +70,7 @@ comments: true
 
 `request.getParameter()`로 데이터를 불러올 수 없게 됩니다.
 
-참고 : [출처]https://gunbin91.github.io/jsp/2019/05/28/jsp_11_file.html  [gunbin91 Blog]
+참고 : [출처]<a href="https://gunbin91.github.io/jsp/2019/05/28/jsp_11_file.html">gunbin91 Blog</a>
 
 ## Multipart가 생긴 이유
 
@@ -86,13 +86,13 @@ comments: true
 
 그래서 등장하는 것이 `multipart` 타입입니다.
 
-참고 : [출처]http://kaludin.egloos.com/v/2270972
+참고 : [출처]<a href="http://kaludin.egloos.com/v/2270972">참고 사이트</a>
 
 ## MultipartRequest
 
 `MultipartRequest` 객체를 알아보기 위해서 아래의 사이트를 참고하였습니다.
 
-[출처]http://www.servlets.com/cos/javadoc/com/oreilly/servlet/MultipartRequest.html
+[출처]<a href="http://www.servlets.com/cos/javadoc/com/oreilly/servlet/MultipartRequest.html">공식문서 사이트</a>
 
 ```java
 MultipartRequest multi = new MultipartRequest(request, savePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
