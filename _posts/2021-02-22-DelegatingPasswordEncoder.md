@@ -14,9 +14,9 @@ DelegatingPasswordEncoder에 대해 정리를 한 내용 입니다.
 
 비밀번호 암호화를 위해서 찾아보다가
 
-스프링 시큐리티에서 PasswordEncoder에 대해서 알게 되었습니다.
+스프링 시큐리티에서 `PasswordEncoder`에 대해서 알게 되었습니다.
 
-그래서 관련 자료들을 찾아보던 도중 Delegating PasswordEncoder를
+그래서 관련 자료들을 찾아보던 도중 `Delegating PasswordEncoder`를
 
 먼저 알아보았습니다.
 
@@ -81,9 +81,9 @@ Spring Security 5.0 이전에
 
 ```
 
-<strong>단방향의 변환된 암호를 풀어서 다시 암호화해야 하는 것이 쉬운 일은 아니다.</strong>
+즉, <strong>단방향의 변환된 암호를 풀어서 다시 암호화해야 하는 것이 쉬운 일은 아니다.</strong>
 
-그래서 나온 해결책은 `DelegatingPasswordEncoder`입니다.
+그래서 나온 해결책이 `DelegatingPasswordEncoder`입니다.
 
 ## 기본 DelegatingPasswordEncoder 생성
 
@@ -93,7 +93,7 @@ Spring Security 5.0 이전에
 PasswordEncoder passwordEncoder =
         PasswordEncoderFactories.createDelegatingPasswordEncoder();
 ```
-기본 값으로 설정된 passwordEncoder는 이렇게 만들어 줍니다.
+기본 값으로 설정된 `passwordEncoder`는 이렇게 만들어 줍니다.
 
 ## 커스텀 DelegatingPasswordEncoder 생성
 
@@ -109,11 +109,11 @@ PasswordEncoder passwordEncoder =
 
 ```
 
-이렇게 생성된 DelegatingPasswordEncoder의 저장 형태는 아래와 같습니다.
+이렇게 생성된 `DelegatingPasswordEncoder`의 저장 형태는 아래와 같습니다.
 
 > {id}encodedPassword
 
-첫 번째 id는 encouders.put의 첫번째 파라미터의 값입니다.
+첫 번째 `id`는 `encoders.put`의 첫번째 파라미터의 값입니다.
 
 두 번째 뒤에 들어가는 암호화된 값이 들어갑니다.
 
@@ -157,7 +157,7 @@ public class DemoApplication {
 }
 ```
 
-DelegatingPasswordEncoder에 id값과 암호화된값이 제대로 출력이 나오는지 확인해 봤습니다.
+`DelegatingPasswordEncoder`에 `id`값과 암호화된값이 제대로 출력이 나오는지 확인해 봤습니다.
 
 ![img.png](/images/2021년/0222/result.PNG)
 
@@ -175,7 +175,7 @@ DelegatingPasswordEncoder에 id값과 암호화된값이 제대로 출력이 나
 
 ### 첫번째 
 
-NoOpPasswordEncoder 방식의 내용입니다.
+`NoOpPasswordEncoder` 방식의 내용입니다.
 
 ```
 This PasswordEncoder is not secure. 
