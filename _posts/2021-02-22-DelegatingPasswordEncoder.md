@@ -189,7 +189,7 @@ BCryptPasswordEncoder, Pbkdf2PasswordEncoder, or SCryptPasswordEncoder.
 
 ### 두번째
 
-![img.png](/images/2021년/0222/deprecated2.PNG)
+![img.png](/images/2021년/0222/deprecated-2.PNG)
 
 다이제스트 기반의 암호화 방식이니 단방향 암호화 방식을 사용하는 것을 권고합니다.
 
