@@ -6,7 +6,7 @@ comments: true
 
 ---
 
-DelegatingPasswordEncoder에 대해 정리를 한 내용 입니다.
+BCryptPasswordEncoder에 대해 정리를 한 내용 입니다.
 
 대부분의 내용은 스프링 시큐리티 래퍼런스에 있는 내용에서 가져왔습니다.
 
@@ -69,9 +69,9 @@ reference에 있는 예시를 조금 더 보기 쉽게 바꾸었습니다.
 
 이것의 뜻은 
 
-1. $2b 는 bcrypt 의 버전정보이다.
+1. $2b 는 bcrypt 의 버전정보 입니다.
 
-2. $10 은 10 round 를 의미하며, 값이 클 수록 연산의 cost 가 증가하는 것이다.
+2. $10 은 10 round 를 의미하며, 값이 클 수록 연산의 cost 가 증가합니다.
 
 ## 두번째
 
