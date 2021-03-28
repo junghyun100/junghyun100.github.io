@@ -6,7 +6,7 @@ comments: true
 
 ---
 
-위 문제는 Programmers 캐시 문제에 관한 설명입니다.
+위 문제는 Programmers 디스크 컨트롤러 문제에 관한 설명입니다.
 
 ---
 
