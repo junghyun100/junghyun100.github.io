@@ -59,8 +59,6 @@ class Solution {
     public static boolean[][][][] visit = new boolean[11][11][11][11];
 
     public int solution(String dirs) {
-        // 시작지점은 0, 0으로 이야기하지만, 좌표상
-        // 음수로 표기하기 보다 5, 5를 처음 위치로 잡아서 시작하는 방식
         int x = 5;
         int y = 5;
         
