@@ -14,7 +14,7 @@ Safari에서 new Date를 사용했을 때 Invaild Date가 나온다면 해결책
 
 ## 상황 설명
 
-![에러출력](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c07b129b-4509-46f5-bc03-94bc715b22bd/Untitled.png)
+![에러출력]()
 
 상황은 다음과 같다.
 
@@ -28,7 +28,7 @@ Safari에서는 <b>"undefined is not an object"</b>라는 TypeError를 출력해
 
 `리턴받는 날짜의 데이터 형식은 'yyyy-m-dd'의 형태로 받고 있는 상황`
 
-![Invaild Date](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d776362c-74f4-46e6-9cfc-0be32c3b61ca/Untitled.png)
+![Invaild Date]()
 
 스택 오버플로우에도 관련된 문제가 있어서 내용을 살펴보니 사유는 다음것으로 보인다.
 
@@ -42,7 +42,7 @@ My similar issue was caused by Safari not knowing how to read the timezone in a 
 
 여러가지 방식들이 존재하고 그 중에서는 다음과 같은 방식으로 진행했다.
 
-![변경된 날짜 형식](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16792728-fef1-4d12-9d52-de0ba98bfdfd/Untitled.png)
+![변경된 날짜 형식]()
 
 'yyyy/MM/dd'의 형식으로 변경하면서 해결했습니다.
 
