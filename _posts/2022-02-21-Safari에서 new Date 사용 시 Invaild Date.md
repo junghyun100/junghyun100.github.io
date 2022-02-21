@@ -8,7 +8,7 @@ comments: true
 
 프로젝트를 진행하다가 발생한 오류이다.
 
-Safari에서 new Date를 사용했을 때 Invaild Date가 나온다면 해결책이다.
+Safari에서 new Date를 사용했을 때 Invaild Date가 나왔을때에 관련한 내용
 
 ---
 
@@ -18,13 +18,17 @@ Safari에서 new Date를 사용했을 때 Invaild Date가 나온다면 해결책
 
 상황은 다음과 같다.
 
-프로젝트를 진행하는 과정에서 프론트쪽으로 리턴 받은 날짜를 new Date() 객체 안에 인자로 넣었더니, 
+프로젝트를 진행하는 과정에서 프론트쪽으로 리턴 받은 날짜를 
+
+new Date() 객체 안에 인자로 넣었더니, 
 
 인터넷 익스플로러에서는 정상적으로 동작을 하던 코드가, 
 
 Safari에서는 <b>"undefined is not an object"</b>라는 TypeError를 출력해냈다.
 
-현재 상황으로는 받고있는 리턴날짜의 형식대로 new Date()에 입력했을 때 다음과 같이 출력이 되었다.
+현재 상황으로는 받고있는 리턴날짜의 형식대로 new Date()에 입력했을 때 
+
+다음과 같이 출력이 되었다.
 
 `리턴받는 날짜의 데이터 형식은 'yyyy-m-dd'의 형태로 받고 있는 상황`
 
@@ -36,7 +40,9 @@ Safari에서는 <b>"undefined is not an object"</b>라는 TypeError를 출력해
 My similar issue was caused by Safari not knowing how to read the timezone in a RFC 822 time zone format.
 ```
 
-이유인 즉 Safari가 RFC 822 표준 시간대 형식 중 DateType이 ('yyyy-m-dd')인 경우를 지원하지 않기 때문입니다.
+이유인 즉 Safari가 RFC 822 표준 시간대 형식 중 DateType이 ('yyyy-m-dd')인 경우를 
+
+지원하지 않기 때문입니다.
 
 따라서 진행중인 포멧의 경우를 변경해야 합니다.
 
