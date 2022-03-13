@@ -54,7 +54,7 @@ comments: true
 
 ## 소스코드
 
-```java
+<pre><code class="java">
 class Solution {
     public int[] solution(int[] lottos, int[] win_nums) {
         int correct =0;
@@ -80,8 +80,7 @@ class Solution {
         return answer;
     }
 }
-
-```
+</code></pre>
 
 ## 문제풀이
 
