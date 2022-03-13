@@ -54,7 +54,7 @@ comments: true
 
 ## 소스코드
 
-<pre><code class="java">
+<pre><code class="Java">
 class Solution {
     public int[] solution(int[] lottos, int[] win_nums) {
         int correct =0;
