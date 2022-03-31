@@ -17,6 +17,8 @@ Link : <a href="https://github.com/code-chobo-study/effective-java">코드초보
 스터디 외적으로 개인적인 속도에 맞춰 정리한 내용들에 대해서는 <br>아래에 List 형식으로 추가할 예정이다.
 * <a href="https://local-radon-9e4.notion.site/1-static-465bf629a03b410a8e847646dba65e19">1장. 생성자대신 static 팩토리 메소드를 고려해 볼 것</a>
 * <a href="https://local-radon-9e4.notion.site/2-77758bf0d7d04a13b7951608b6a3d9f9">2장. 생성자에 매개변수가 많다면 빌더를 고려하라</a>
+* <a href="https://local-radon-9e4.notion.site/9-Try-Finally-Try-with-Resource-7f05088336ba4ea38b0fcc304c7a1a15">9장. Try-Finally 대신 Try-with-Resource 사용하라</a>
+
 
 > 공부를 하면서 개인적인 의견이 들어가는 내용도 있으니,감안하셔서 보시길 부탁드립니다.
 
