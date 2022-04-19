@@ -18,6 +18,7 @@ Link : <a href="https://github.com/code-chobo-study/effective-java">코드초보
 * <a href="https://local-radon-9e4.notion.site/1-static-465bf629a03b410a8e847646dba65e19">1장. 생성자대신 static 팩토리 메소드를 고려해 볼 것</a>
 * <a href="https://local-radon-9e4.notion.site/2-77758bf0d7d04a13b7951608b6a3d9f9">2장. 생성자에 매개변수가 많다면 빌더를 고려하라</a>
 * <a href="https://local-radon-9e4.notion.site/3-private-673214c53bcd431b84b0131efc648cf2">3장. private 생성자나 열거 타입으로 싱글턴임을 보증하라</a>
+* <a href="https://local-radon-9e4.notion.site/4-private-12f14dec698d4f1aad4c0fc074107856">4장.인스턴스화를 막으려거든 private 생성자를 사용하라</a>
 * <a href="https://local-radon-9e4.notion.site/9-Try-Finally-Try-with-Resource-7f05088336ba4ea38b0fcc304c7a1a15">9장. Try-Finally 대신 Try-with-Resource 사용하라</a>
 * <a href="https://local-radon-9e4.notion.site/13-clone-964d1c07d5324605878acb7e5a65936c">13장. clone() 재정의는 주의해서 진행하라</a>
 
