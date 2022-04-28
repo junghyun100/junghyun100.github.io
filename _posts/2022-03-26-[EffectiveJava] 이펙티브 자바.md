@@ -19,6 +19,7 @@ Link : <a href="https://github.com/code-chobo-study/effective-java">코드초보
 * <a href="https://local-radon-9e4.notion.site/2-77758bf0d7d04a13b7951608b6a3d9f9">2장. 생성자에 매개변수가 많다면 빌더를 고려하라</a>
 * <a href="https://local-radon-9e4.notion.site/3-private-673214c53bcd431b84b0131efc648cf2">3장. private 생성자나 열거 타입으로 싱글턴임을 보증하라</a>
 * <a href="https://local-radon-9e4.notion.site/4-private-12f14dec698d4f1aad4c0fc074107856">4장.인스턴스화를 막으려거든 private 생성자를 사용하라</a>
+* <a href="https://local-radon-9e4.notion.site/5-543d9a4f8a834ba6be951beb37b9b6cc">5장.자원을 직접 명시하지 말고 의존 객체 주입을 사용하라</a>
 * <a href="https://local-radon-9e4.notion.site/9-Try-Finally-Try-with-Resource-7f05088336ba4ea38b0fcc304c7a1a15">9장. Try-Finally 대신 Try-with-Resource 사용하라</a>
 * <a href="https://local-radon-9e4.notion.site/13-clone-964d1c07d5324605878acb7e5a65936c">13장. clone() 재정의는 주의해서 진행하라</a>
 * <a href="https://local-radon-9e4.notion.site/19-af3b89760f0d46c59074854d544959f5">19장. 상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라.</a>
