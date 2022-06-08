@@ -26,6 +26,8 @@ Link : <a href="https://github.com/code-chobo-study/effective-java">코드초보
 * <a href="https://local-radon-9e4.notion.site/26-raw-type-e35bfe297a964678b7d82216c0dfbc57">26장.raw type은 사용하지 말라</a>
 * <a href="https://local-radon-9e4.notion.site/28-1a30760bf320431ebbbe59fd454a352d">28장. 배열보다는 리스트를 사용하라</a>
 * <a href="https://local-radon-9e4.notion.site/33-4c1a2fcf3a574907b046da7e73db55f0">33장. 타입 안정 이종컨테이너를 고려하라.</a>
+* <a href="https://local-radon-9e4.notion.site/36-EnumSet-ec056a15b6ae43918f29d38b2c3d9153">36장.비트 필드 대신 EnumSet을 사용하라</a>
+* <a href="https://local-radon-9e4.notion.site/42-0961f8d238914973b3a6238ad5ed57eb">42장. 익명 클래스보다는 람다를 사용하라</a>
 
 
 > 공부를 하면서 개인적인 의견이 들어가는 내용도 있으니,감안하셔서 보시길 부탁드립니다.
