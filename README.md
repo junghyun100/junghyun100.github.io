@@ -10,15 +10,6 @@
 
 [백정현](qorwjdgus8951@gmail.com)
 
-## 환경
-
-<img src="https://rockylim92.github.io/images/jekyll.png" width="50%">
-<a href="https://changemin.github.io/2019/06/29/(1)-what-is-jekyll/">이미지 출처</a>
-
-|  환경  |   Theme    |
-| :----: | :--------: |
-| Jekyll |  Kiko Now  |
-
 ## 기능
 
 - 메인 화면
