@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Redis Cluster]Redis Cluster는 Redis Sentinel과 무엇이 다를까?"
+title: "[Redis Cluster]Redis Cluster는 Redis Master/Slave와 무엇이 다를까?"
 tags: [Redis Cluster]
 comments: true
 ---
@@ -35,8 +35,10 @@ Redis는 Remote Dictionary Server의 약자로, 인메모리 기반의 Key-Value
 
 공식문서 Link : <a href="https://redis.io/docs/latest/develop/">공식문서</a>
 
-## Redis Sentinel
+## Redis Master/Slave
 
-![img.png](../images/25년/2월/Redis관련/RedisSentinel.png)
+![Redis Master/S;ave](../images/25년/2월/Redis관련/RedisMS.jpg)
+
+
 
 ---
