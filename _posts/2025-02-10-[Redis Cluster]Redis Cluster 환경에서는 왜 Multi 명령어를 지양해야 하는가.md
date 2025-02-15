@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "[Redis Cluster]Redis Cluster는 Redis Master/Slave와 무엇이 다를까?"
+title: "[Redis Cluster]Redis Cluster 환경에서는 왜 Multi 명령어를 지양해야 하는가?"
 tags: [Redis Cluster]
 comments: true
 ---
 
 우리 회사에서는 Redis Cluster 환경을 사용하고 있다.
 
-Redis Cluster의 환경과 일반 Redis의 형태와 어떤 차이인가 알게된 내용을 간단하게 회고하며 정리해본다.
+Redis Cluster의 환경으로 변경되어 기존의 일반 Redis의 형태와 어떤 차이인가 확인하다가 
+
+Multi 명령어를 사용하면 안되는가 알게된 내용을 간단하게 회고하며 정리해본다.
 
 이 글에서는 Redis에 대해서나 명령어에 대한 내용은 간략하게만 설명할 예정이다.
 
@@ -37,9 +39,9 @@ Redis는 Remote Dictionary Server의 약자로, 인메모리 기반의 Key-Value
 
 ## Redis Master/Slave
 
-![Redis Master/S;ave](../images/25년/2월/Redis관련/RedisMS.jpg)
+![Redis Master/Slave](../images/25년/2월/Redis관련/RedisMS.jpg)
 
-Redis Master/Slave 
+**Redis Master/Slave** 
 
 Master / Slave 구조는 데이터의 복제와 읽기/쓰기 작업을 분리하여 성능과 가용성을 높이는 기본적인 아키텍쳐이다.
 
@@ -67,8 +69,39 @@ Master가 장애 발생 시, Slave 중 하나를 새로운 Master로 승격시�
 
 승격된 새로운 Master에 다른 Slave들이 재연결하여 복제를 수행한다.
 
-이것에 대해서 확장된 개념으로 Redis Sentinel이 있으며 이 경우 자동 장애 조치(Auto Failover)를 수행할 수 있다. 
+이를 수동으로 처리해 주는것이 불편할 수 있기에 
 
+확장된 개념으로 Redis Sentinel이 있으며 이 경우 자동 장애 조치(Auto Failover)를 수행할 수 있다. 
+
+## Redis Cluster
+
+![Redis Cluster](../images/25년/2월/Redis관련/RedisCluster.jpg)
+
+**Redis Cluster**
+
+**Master**의 역할 : 모든 읽기와 쓰기 작업을 처리한다. 
+
+**Slave**의 역할 : 데이터들이 Shading되어 분산되어 있다.
+
+### 특징
+
+1.최소 노드 수는 6개 입니다. 
+
+2.여러 master노드로 구성되어 단일 실패 지점을 제거할 수 있습니다.(장점)
+
+3.노드를 추가하여 쉽게 확장할 수 있습니다.(장점)
+
+4.데이터를 16384개의 **해시 슬롯(hash slot)**으로 나누어 여러 노드에 분산 저장합니다.
+
+5.키는 CRC16(key) % 16384를 통해 해시 슬롯에 매핑되며, 각 노드는 특정 슬롯 범위를 담당합니다
+
+예를 들어 다음과 같다.
+
+* 노드 A: 슬롯 0~5460
+
+* 노드 B: 슬롯 5461~10922
+
+* 노드 C: 슬롯 10923~16383
 
 
 
