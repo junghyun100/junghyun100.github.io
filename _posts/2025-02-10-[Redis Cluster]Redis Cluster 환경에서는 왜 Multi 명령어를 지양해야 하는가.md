@@ -146,17 +146,17 @@ key:{hashExample}:example
 
 hash tag를 포함한 key는 hash tag 내부에 있는 문자열에만 hash를 진행한다. 
 
-따라서 같은 hash tag를 가진 다른 key도 같은 node에 들어가는 것을 보장할 수 있습니다.
+따라서 같은 hash tag를 가진 다른 key도 같은 node에 들어가는 것을 보장할 수 있다.
 
-이 외에도 다른 여러 케이스가 존재하며, <a href="https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/#hash-tags">hash tags의 자세한 사용법</a>은 Redis 공식 문서에서 확인할 수 있습니다.
+이 외에도 다른 여러 케이스가 존재하며, <a href="https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/#hash-tags">hash tags의 자세한 사용법</a>은 Redis 공식 문서에서 확인할 수 있다.
 
-hash tags는 트랜잭션뿐만 아니라 아래와 같이 동시에 여러 key에 접근하는 연산에도 적용하여 사용할 수 있습니다. 
+hash tags는 트랜잭션뿐만 아니라 아래와 같이 동시에 여러 key에 접근하는 연산에도 적용하여 사용할 수 있다. 
 
-즉, 동일 node에서 돌아가야만 하는 기능들에 적용할 수 있습니다.
+즉, 동일 node에서 돌아가야만 하는 기능들에 적용할 수 있다.
 
 그러나 여러 node에 분산되는 것이 아니라 하나의 node에만 집중될 수 있다는 것은
 
-이것은 분산 시스템을 위한 **Redis Cluster의 장점을 무시**하고 기존의 Master/Slave와 다른 바 없어진다.
+이것은 분산 시스템을 위한 **Redis Cluster의 장점을 무시**하고 기존의 Master/Slave와 다른 바 없다.
 
 따라서 hash tags를 사용하는 것은 여러가지 상황들을 고려 후 결정해야 한다.
 
