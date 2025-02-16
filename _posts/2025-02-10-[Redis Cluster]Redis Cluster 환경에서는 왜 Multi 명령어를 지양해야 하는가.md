@@ -7,9 +7,9 @@ comments: true
 
 우리 회사에서는 Redis Cluster 환경을 사용하고 있다.
 
-Redis Cluster의 환경으로 변경되어 기존의 일반 Redis의 형태와 어떤 차이인가 확인하다가 
+기존의 Redis Master/Slave 형상에서 Redis Cluster의 환경으로 변경되었고, 
 
-Multi 명령어를 사용하면 안되는가 알게된 내용을 간단하게 회고하며 정리해본다.
+어떤 차이인가와 Multi 명령어를 사용하면 안되는가 알게된 내용을 간단하게 회고하며 정리해본다.
 
 이 글에서는 Redis에 대해서나 명령어에 대한 내용은 간략하게만 설명할 예정이다.
 
