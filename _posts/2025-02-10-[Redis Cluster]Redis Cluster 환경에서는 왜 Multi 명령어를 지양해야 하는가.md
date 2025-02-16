@@ -45,7 +45,7 @@ Redis는 Remote Dictionary Server의 약자로, 인메모리 기반의 Key-Value
 
 Master / Slave 구조는 데이터의 복제와 읽기/쓰기 작업을 분리하여 성능과 가용성을 높이는 기본적인 아키텍쳐이다.
 
-**Master**의 역할 : 모든 쓰기(Write) 작업을 처리한다. 그림상에서는 M을 의미
+**Master**의 역할 : 모든 쓰기(Write) 작업을 처리한다.
 
 **Slave**의 역할 : Master의 데이터를 복제해서 가지고 있는다. Read 작업을 처리하며 Master의 부하를 분산시킨다. 
 
@@ -101,6 +101,8 @@ Sharding이란? 데이터를 여러 노드로 분산하여 처리량 및 용량�
 
 이에 대한 자세한 내용은 공식문서에서 <a href="https://redis.io/docs/latest/operate/oss_and_stack/reference/cluster-spec/#key-distribution-model">Cluster Spec</a>에서 확인할 수 있다.
 
+<br>
+
 **예를 들어 다음과 같다.**
 
 * 노드 A: 슬롯 0~5460
@@ -111,19 +113,17 @@ Sharding이란? 데이터를 여러 노드로 분산하여 처리량 및 용량�
 
 # 본론으로 들어가면..
 
-Multi 명령어를 왜 사용할 수 없을까?
-
 위에서 작성한 것 처럼 Redis Cluster는 데이터를 여러 노드에 분산하여 저장한다.
 
 Multi 명령어를 사용하게 된다면 하나의 트랜잭션 내의 키들이 다른 노드에 저장될 수 있어, 
 
 동시에 여러 key에 접근하는 것이 불가능해진다.
 
-동시에 여러 key에 접근한다는 의미는 Redis 연산을 수행할 때 인자로 
-
-여러 개의 key를 넘기는 상황을 의미한다. 
+동시에 여러 key에 접근한다는 의미는 Redis 연산을 수행할 때 인자로 여러 개의 key를 넘기는 상황을 의미한다. 
 
 대표적인 명령어로는 **mget**, **mset**을 예로 들 수 있다.
+
+<br>
 
 <a href="https://docs.spring.io/spring-data/redis/docs/current/api/org/springframework/data/redis/core/ValueOperations.html#multiGet(java.util.Collection)">spring doc</a>에서 메소드 검색으로 multiGet 확인할 수 있다.
 
