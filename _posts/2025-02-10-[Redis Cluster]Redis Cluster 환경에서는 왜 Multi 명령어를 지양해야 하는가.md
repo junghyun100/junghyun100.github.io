@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[Redis Cluster]Redis Cluster 환경에서는 왜 Multi 명령어를 지양해야 하는가?"
-tags: [Redis Cluster]
+title: "[Redis]Redis Cluster 환경에서는 왜 Multi 명령어를 지양해야 하는가?"
+tags: [Redis]
 comments: true
 ---
 
