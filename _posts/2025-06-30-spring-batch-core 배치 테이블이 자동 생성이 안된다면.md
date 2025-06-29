@@ -58,13 +58,13 @@ spring.batch.jdbc.initialize-schema: ALWAYS를 설정했더라도 테이블이 �
 
 ## 2.해결 방안
 
-위에 올려두었던, Spring boot 3.0의 공식문서에서 제공해주었던 방식을 사용한다.
+위에 올려두었던, Spring boot 3.0의 공식문서에서 제공해주었던 방식을 사용합니다.
 
-링크에서 Initialize a Database Using Basic SQL Scripts 쪽을 인용 해보면 다음과 같다.
+링크에서 Initialize a Database Using Basic SQL Scripts 쪽을 인용 해보면 다음과 같습니다.
 
 > In addition, Spring Boot processes the optional:classpath*:schema-${platform}.sql and optional:classpath*:data-${platform}.sql files (if present), where ${platform} is the value of spring.sql.init.platform. This allows you to switch to database-specific scripts if necessary. For example, you might choose to set it to the vendor name of the database (hsqldb, h2, oracle, mysql, postgresql, and so on).
 
-classpath를 이용해 schema의 플랫폼에 따라 sql 문을 가져올 수 있다. (spring-batch 의존성이 제대로 적용되어 있다면 사용이 가능)
+classpath를 이용해 schema의 플랫폼에 따라 sql 문을 가져올 수 있습니다. (spring-batch 의존성이 제대로 적용되어 있다면 사용이 가능)
 
 참고 링크 : <a href="https://github.com/spring-projects/spring-batch/tree/main/spring-batch-core/src/main/resources/org/springframework/batch/core">spring batch core에서 제공하는 SQL들</a>
 
@@ -72,12 +72,12 @@ classpath를 이용해 schema의 플랫폼에 따라 sql 문을 가져올 수 �
 
 검색 시 All로 설정했을 때 플랫폼 값을 정확히 입력해야 가져와져서, 
 
-Files를 기준으로 검색하는 것을 나는 선호한다.
+Files를 기준으로 검색하는 것을 저는 선호합니다.
 
-이번 프로젝트에서는 mysql을 기준으로 진행하고 있기 때문에, schema-mysql을 들어가보면 다음과 같다.
+이번 프로젝트에서는 mysql을 기준으로 진행하고 있기 때문에 schema-mysql을 들어가보면 다음과 같습니다.
 
 ![schema-mysql.png](../images/25%EB%85%84/6%EC%9B%94/schema-mysql.png)
 
-해당 내용들을 실행하면 정상적으로 Spring batch에 meta 테이블이 들어간 것을 확인할 수 있다.
+해당 내용들을 실행하면 정상적으로 Spring batch에 meta 테이블이 들어간 것을 확인할 수 있습니다.
 
 ---
