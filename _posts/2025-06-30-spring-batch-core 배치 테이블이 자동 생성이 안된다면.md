@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "spring batch core 배치 테이블이 자동 생성이 안된다면?"
+title: "spring batch core 배치 테이블이 자동 생성이 안된다면"
 tags: [Spring]
 comments: true
 ---
