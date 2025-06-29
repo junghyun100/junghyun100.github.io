@@ -32,6 +32,9 @@ navigation:
 # Pagination
 paginate: 4
 
+# Show future posts (posts with future dates)
+future: true
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   behance: # https://www.behance.net/<username>

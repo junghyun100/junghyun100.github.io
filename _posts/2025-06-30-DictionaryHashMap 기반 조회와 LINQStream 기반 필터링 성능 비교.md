@@ -1,166 +1,84 @@
 ---
 layout: post
-title: "Dictionary/HashMap 기반 조회와 LINQ/Stream 기반 필터링 성능 비교"
-tags: [성능 개선]
+title: "Spring Batch meta 테이블이 생성이 안된다면?"
+tags: [Spring]
 comments: true
 ---
- 
-해당 Post는 실무에서 대용량 데이터를 다루는 애플리케이션에서 성능을 올리기 위해 고민하다가 알게된 점을 작성합니다.
 
-예를 들어, 조회해야하는 상품 혹은 SKU의 정보가 100만 건 이상의 데이터를 기반으로 
-
-어떤 데이터를 추출해야하는 상황이 있을 수 있습니다.
-
-C#의 LINQ와 Java의 Stream은 가독성과 편리함을 제공하지만, 100만 건 이상의 데이터에서는 성능 병목을 초래할 수 있습니다.
-
-이번 포스트에서는 Dictionary/HashMap 기반 조회와 LINQ/Stream 기반 필터링의 성능을 비교하고,
-
-대규모 데이터 처리에서 어떤 방식을 선택했는지 정리해봅니다. 
+해당 Post는 사이드 프로젝트를 진행하다가 meta 테이블이 없어서 발생한 문제를 팀원들에게 공유하다가 작성해보는 글입니다.
 
 ---
 
-### 시나리오: 어떤 문제를 해결할까?
 
-다음 상황을 가정합니다.
+## 가정: 어떤 문제를 해결할까?
 
-1.**객체 A의 List**와 **객체 B의 List**는 **각각 10만 건**의 데이터를 포함하고 있습니다.<br> 
-(더 많은 데이터를 사용해보려다 너무 오래걸려서 10만건으로 정정)
+환경은 다음과 같이 가정합니다.
 
-2.객체 A에서 객체 B에 포함된 항목만 추출해 새로운 리스트 생성하고자 합니다.
+버젼 : **Spring Boot 3**, **Spring Batch 5**
 
-3.객체 A와 B는 예시이므로 간단한 구조를 가지고, ID를 기준으로 매핑한다고 가정합니다.
- 
-```java
-// C# 객체 예시
-public class ObjectA { 
-    public int Id { get; set; } 
-    public string Name { get; set; } 
-}
-public class ObjectB { 
-    public int Id { get; set; } 
-    public string Category { get; set; } 
-}
-```
-```java
-// Java 객체 예시
-@Getter
-@Setter
-class ObjectA {
-  private int id;
-  private String name;
+yml은 다음과 같이 설정해 두었습니다.
 
-  public ObjectA(int i) {
-    this.id = i;
-    this.name = String.valueOf(i);
-  }
-}
-@Getter
-@Setter
-class ObjectB {
-  private int id;
-  private String category;
-
-  public ObjectB(int i) {
-    this.id = i;
-    this.category = String.valueOf(i);
-  }
-}
-
+```kotlin
+  # 스프링 배치 설정
+  batch:
+    job:
+      enabled: true
+    jdbc:
+      initialize-schema: always
 ```
 
-## 두 가지 로직을 비교합니다.
+위 처럼 설정한 것은 다음과 같은 이유가 있습니다.
 
-### 1. Dictionary/HashMap 방식
+1. initialize-schema의 값을 always로 설정한 것은 meta 테이블 정보를 실행 시점에 넣어주고 싶어서. (생성 이후에는 never를 쓰는 것을 권장합니다.)
+2. 실행 시 job을 실행함으로써 배치 테이블이 제대로 들어갔는지 확인 합니다.
 
-객체 B의 리스트를 Dictionary(C#) 또는 HashMap(Java)으로 변환 후, 객체 A를 반복하며 조회
+### 원인1. Spring Boot 3의 자동 구성 변경
 
-### 2. LINQ/Stream 방식: 
+Spring Boot 3에서는 Spring Batch의 자동 구성 방식이 변경되었습니다.
 
-객체 A에서 LINQ의 Where(C#) 또는 Stream의 filter(Java)를 사용해 객체 B에 포함된 항목 필터링
+특히 @EnableBatchProcessing 어노테이션의 사용이 권장되지 않으며, 이를 추가하면 Spring Batch의 자동 구성이 비활성화될 수 있습니다.
 
-## 성능 분석: 이론적으로 어떤 방식이 빠를까?
+이로 인해 spring.batch.* 설정(예: batch.jdbc.initialize-schema)이 무시될 수 있습니다.
 
-### 1.Dictionary/HashMap 방식
+> @EnableBatchProcessing should not be used with DefaultBatchConfiguration. You should either use the declarative way of configuring Spring Batch through @EnableBatchProcessing, or use the programmatic way of extending DefaultBatchConfiguration, but not both ways at the same time.
 
-* 작동 원리:
-  * 객체 B의 리스트를 Dictionary/HashMap으로 변환 (키: ID, 값: 객체 B)
-  * 객체 A를 순회하며 Dictionary/HashMap에서 ID를 조회해 매칭된 항목을 새 리스트에 추가<br><br>
-* 시간복잡도:
-  * Dictionary(C#)와 HashMap(Java)은 해시 테이블 기반, 평균 조회 시간복잡도 O(1)
-  * 객체 B를 Dictionary/HashMap으로 변환: O(m) (m: 객체 B 크기, 10만)
-  * 객체 A를 순회하며 조회: O(n) (n: 객체 A 크기, 10만)
-  * 총 시간복잡도: O(n + m), 즉 약 20만 연산<br><br>
-* 메모리: 해시 테이블로 추가 메모리 사용 (10만 건 기준 약 2~3배)
+참고 근거1 : <a href="https://github.com/spring-projects/spring-batch/issues/4252">spring batch issue 페이지</a>
 
-### 2.LINQ/Stream 방식
+참고 근거2 : <a href="https://docs.spring.io/spring-batch/docs/5.0.x/reference/html/job.html#configureJob">공식문서</a>
 
-* 작동 원리:
-   * 객체 A의 리스트에서 LINQ의 Where 또는 Stream의 filter를 사용
-   * 각 객체 A의 ID가 객체 B 리스트에 있는지 확인 (Contains 또는 anyMatch의 방식)<br><br>
-* 시간복잡도:
-   * 객체 B의 Contains/anyMatch는 O(m), 즉 10만 연산
-   * 객체 A의 각 원소(10만)마다 호출하므로 총 시간복잡도: O(n * m), 즉 약 100억 연산
-   * 더 많은 데이터에서는 심각한 성능 저하 발생<br><br>
-* 메모리: 추가 자료구조 없이 리스트만으로 사용이 가능
+### 원인2. 내장 데이터베이스와 외부 데이터베이스 간 차이
+
+Spring Boot는 기본적으로 내장 데이터베이스(H2, HSQLDB 등)를 사용할 때만 메타데이터 테이블을 자동으로 생성하도록 설정되어 있습니다.
+
+외부 데이터베이스(MySQL, PostgreSQL 등)를 사용하는 경우,
+
+spring.batch.jdbc.initialize-schema: ALWAYS를 설정했더라도 테이블이 생성되지 않을 수 있습니다.
+
+참고 근거 : <a href="https://docs.spring.io/spring-boot/docs/3.0.x/reference/html/howto.html#howto.data-initialization">spring boot 3.0 공식문서(9. Database Initialization)</a>
 
 
-위 내용을 요약하면 다음과 같이 정리할 수 있습니다.
+## 2.해결 방안
 
-| 방식                      | 시간복잡도   | 대용량(10만 건) 성능 | 메모리   |
-|-------------------------|-------------|---------------------|-------|
-| Dictionary / HashMap 조회 | O(n + m)    | 매우 빠름           | 사용 많음 |
-| LINQ / Stream + List 검색 | O(n * m)    | 매우 느림           | 사용 적음 |
+위에 올려두었던, Spring boot 3.0의 공식문서에서 제공해주었던 방식을 사용합니다.
 
-이론적으로 Dictionary/HashMap이 LINQ/Stream보다 훨씬 효율적입니다. 
+링크에서 Initialize a Database Using Basic SQL Scripts 쪽을 인용 해보면 다음과 같습니다.
 
-실제로 성능은 어떨까요? (Java인 유형만 확인해 봅니다.)
+> In addition, Spring Boot processes the optional:classpath*:schema-${platform}.sql and optional:classpath*:data-${platform}.sql files (if present), where ${platform} is the value of spring.sql.init.platform. This allows you to switch to database-specific scripts if necessary. For example, you might choose to set it to the vendor name of the database (hsqldb, h2, oracle, mysql, postgresql, and so on).
 
-# 10만 건 데이터의 실제 성능
+classpath를 이용해 schema의 플랫폼에 따라 sql 문을 가져올 수 있습니다. (spring-batch 의존성이 제대로 적용되어 있다면 사용이 가능)
 
-10만 건 데이터를 기준으로 Java에서 두 방식의 성능을 테스트했습니다.
+참고 링크 : <a href="https://github.com/spring-projects/spring-batch/tree/main/spring-batch-core/src/main/resources/org/springframework/batch/core">spring batch core에서 제공하는 SQL들</a>
 
-```java
-        List<ObjectA> listA = IntStream.range(1, 100000).mapToObj(ObjectA::new).toList();
-        List<ObjectB> listB = IntStream.range(1, 100000).mapToObj(ObjectB::new).toList();
+![spring-batch-core-sql.png](../images/25%EB%85%84/6%EC%9B%94/spring-batch-core-sql.png)
 
-        // HashMap 방식
-        Map<Integer, ObjectB> mapB = listB.stream().collect(Collectors.toMap(ObjectB::getId, b -> b));
-        List<ObjectA> result1 = new ArrayList<>();
-        for (ObjectA a : listA) {
-            if (mapB.containsKey(a.getId())) result1.add(a);
-        }
-        
-        // Stream 방식
-        List<ObjectA> result2 = listA.stream().filter(a -> listB.stream()
-                .anyMatch(b -> b.getId() == a.getId())).toList();
-```
+검색 시 All로 설정했을 때 플랫폼 값을 정확히 입력해야 가져와져서,
 
-결과는 다음과 같이 나옵니다.
+Files를 기준으로 검색하는 것을 저는 선호합니다.
 
-### 이것을 표로 정리하면?
+이번 프로젝트에서는 mysql을 기준으로 진행하고 있기 때문에 schema-mysql을 들어가보면 다음과 같습니다.
 
-![img.png](../images/25년/6월/20250604시간비교.png)
+![schema-mysql.png](../images/25%EB%85%84/6%EC%9B%94/schema-mysql.png)
 
-|       | HashMap                 | Stream                  | 배율        |
-|-------|-------------------------|-------------------------|-----------|
-| 시작 시간 | 2025-06-05 22:52:36.332 | 2025-06-05 22:52:36.456 |           |
-| 종료 시간 | 2025-06-05 22:52:36.450 | 2025-06-05 22:53:19.361 |           |
-| 차이    | 0.118초 = 118ms          | 42.905초 = 42,905ms      | ≈ 363.77배 |
-
-## 결론
-
-대량의 데이터를 처리한다면, Dictionary/HashMap이 필수라고 생각 됩니다. 
-
-LINQ와 Stream은 가독성이 뛰어나지만, 10만 건에서도 실행 시간이 수십 초를 초과합니다.
-
-예시로는 10만 건이지만 실제로는 100만 건 혹은 그 이상에 객체가 담긴 List가 N개가 더 있을 수 있습니다.
-
-그렇다면 해당 부분에서 병목 현상이 발생하게 됩니다.
-
-각각의 장 단점이 있으므로 **각자의 기준**을 세우면 될 것 입니다.
-
-속도 향상으로 메모리에 대한 트레이드오프 정당화가 될 수 있다면 Dictionary/HashMap가 좋고,
-
-소규모 데이터(제 기준 1000건 정도)인 경우 LINQ / Stream을 이용하는 것도 방법이 될 것 입니다.
+해당 내용들을 실행하면 정상적으로 Spring batch에 meta 테이블이 들어간 것을 확인할 수 있습니다.
 
 ---
