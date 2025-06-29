@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Spring Batch meta 테이블이 생성이 안된다면?"
+date: 2025-06-30
 tags: [Spring]
 comments: true
 ---
