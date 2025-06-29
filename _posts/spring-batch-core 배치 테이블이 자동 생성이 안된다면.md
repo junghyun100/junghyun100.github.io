@@ -66,6 +66,8 @@ spring.batch.jdbc.initialize-schema: ALWAYS를 설정했더라도 테이블이 �
 
 classpath를 이용해 schema의 플랫폼에 따라 sql 문을 가져올 수 있다. (spring-batch 의존성이 제대로 적용되어 있다면 사용이 가능)
 
+참고 링크 : <a href="https://github.com/spring-projects/spring-batch/tree/main/spring-batch-core/src/main/resources/org/springframework/batch/core">spring batch core에서 제공하는 SQL들</a>
+
 ![spring-batch-core-sql.png](../images/25%EB%85%84/6%EC%9B%94/spring-batch-core-sql.png)
 
 검색 시 All로 설정했을 때 플랫폼 값을 정확히 입력해야 가져와져서, 
