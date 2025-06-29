@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring batch core의 메타 테이블이 자동 생성 안된다면"
+title: "DictionaryHashMap 기반 조회와 LINQStream 기반 필터링 성능 비교"
 tags: [Spring]
 comments: true
 ---
