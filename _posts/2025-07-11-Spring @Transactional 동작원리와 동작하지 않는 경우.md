@@ -109,7 +109,9 @@ public class MyService {
 
 #### 문제 2. public이 아닌 메서드
 
-프록시는 `public` 메서드만 오버라이드합니다. `private`, `protected`, `default` 메서드에 `@Transactional`을 붙이면 트랜잭션이 적용되지 않습니다.
+프록시는 `public` 메서드만 오버라이드합니다. 
+
+`private`, `protected`, `default` 메서드에 `@Transactional`을 붙이면 트랜잭션이 적용되지 않습니다.
 
 **해결법**
 - `@Transactional`은 `public` 메서드에만 사용.
@@ -204,9 +206,7 @@ public class MyService {
 
 ---
 
-## 3. 추가 문제와 해결법
-
-### 3.1. 다중 스레드 환경
+### 2.6. 다중 스레드 환경
 
 트랜잭션은 **스레드 로컬**에 저장되므로 다른 스레드에서 실행된 로직은 같은 트랜잭션에 참여하지 않습니다.
 
@@ -215,10 +215,6 @@ public class MyService {
 - `@Async` 호출에서 트랜잭션이 필요하면 대상 메서드에 `@Transactional` 추가.
 - 스레드 풀 설정을 확인해 트랜잭션 전파가 올바르게 작동하도록 조정.
 
-### 3.2. 프록시 구현 방식 (CGLIB vs JDK 프록시)
-
-인터페이스가 없는 클래스에 `@Transactional`을 적용하면 **CGLIB 프록시**가 사용됩니다. 설정 문제로 프록시 생성이 실패할 수 있습니다.
-
 **해결법**
 
 - 인터페이스를 정의하거나 CGLIB 프록시를 명시적으로 활성화.
@@ -226,7 +222,7 @@ public class MyService {
 
 ---
 
-## 4. 디버깅 팁
+## 3. 디버깅 팁
 
 ### 로그 확인
 
@@ -256,7 +252,7 @@ public void checkTransaction() {
 }
 ```
 
-### 5. 결론
+### 4. 결론
 
 `@Transactional`은 트랜잭션 관리를 쉽게 만들어주지만, 
 
