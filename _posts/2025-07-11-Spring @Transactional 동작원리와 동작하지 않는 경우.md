@@ -19,7 +19,7 @@ comments: true
 
 Spring은 프록시 기반 AOP(Aspect-Oriented Programming)를 활용해 `@Transactional`을 구현합니다. 
 
-동작 과정을 단계별로 살펴보면 다음과 같습니다:
+동작 과정을 단계별로 살펴보면 다음과 같습니다.
 
 1.**프록시 객체 생성** 
 
@@ -27,7 +27,8 @@ Spring 컨테이너는 `@Transactional`이 붙은 클래스나 메서드를 감�
 
 이 프록시는 실제 객체를 감싸며 트랜잭션 시작, 커밋, 롤백과 같은 로직을 추가로 처리합니다. 
 
-프록시는 두 가지 방식으로 생성됩니다:
+프록시는 두 가지 방식으로 생성됩니다.
+
   - **CGLIB**: 클래스 기반 프록시.
   - **JDK 동적 프록시**: 인터페이스 기반 프록시.
 
@@ -45,8 +46,8 @@ Spring 컨테이너는 `@Transactional`이 붙은 클래스나 메서드를 감�
 
 메서드가 정상적으로 끝나면 트랜잭션을 **커밋**합니다.
 
-  - **런타임 예외** (예: `RuntimeException`) 발생 시 **롤백**.
-  - **체크 예외** (예: `IOException`) 발생 시 기본적으로 **커밋** (설정 변경 가능).
+  - **런타임 예외** 발생 시 **롤백**.
+  - **체크 예외** 발생 시 기본적으로 **커밋** (설정 변경 가능).
 
 5.**결과 반환**  
 
@@ -60,11 +61,11 @@ Spring 컨테이너는 `@Transactional`이 붙은 클래스나 메서드를 감�
 
 ### 2.1. 프록시 기반으로 인해 발생
 
-#### 문제 1: 같은 클래스 내 메서드 호출
+#### 문제 1. 같은 클래스 내 메서드 호출
 
 같은 클래스 내에서 `@Transactional` 메서드를 직접 호출하면 프록시를 거치지 않아 트랜잭션이 적용되지 않습니다.
 
-**예시**:
+**예시**
 ```java
 @Service
 public class MyService {
@@ -83,7 +84,7 @@ public class MyService {
 
 **해결법**: 별도의 서비스 클래스로 분리하거나 `ApplicationContext`를 사용해 프록시를 호출.
 
-**예시**:
+**예시**
 ```java
 @Service
 public class MyService {
@@ -106,11 +107,11 @@ public class MyService {
 }
 ```
 
-#### 문제 2: public이 아닌 메서드
+#### 문제 2. public이 아닌 메서드
 
 프록시는 `public` 메서드만 오버라이드합니다. `private`, `protected`, `default` 메서드에 `@Transactional`을 붙이면 트랜잭션이 적용되지 않습니다.
 
-**해결법**:
+**해결법**
 - `@Transactional`은 `public` 메서드에만 사용.
 - 인터페이스를 정의해 프록시 생성을 보장.
 
@@ -118,7 +119,7 @@ public class MyService {
 
 Spring은 기본적으로 **런타임 예외** 발생 시 롤백하고, **체크 예외** 발생 시 커밋합니다.
 
-**예시**:
+**예시**
 ```java
 @Transactional
 public void myMethod() throws IOException {
@@ -130,7 +131,7 @@ public void myMethod() throws IOException {
 
 **해결법**: `@Transactional(rollbackFor = Exception.class)`를 사용해 체크 예외도 롤백.
 
-**예시**:
+**예시**
 ```java
 @Transactional(rollbackFor = Exception.class)
 public void myMethod() throws IOException {
@@ -142,7 +143,7 @@ public void myMethod() throws IOException {
 
 트랜잭션 전파 속성(`Propagation`)이 잘못 설정되면 트랜잭션이 의도대로 동작하지 않을 수 있습니다.
 
-**주요 전파 속성**:
+**주요 전파 속성**
 
 - `REQUIRED` (기본값): 기존 트랜잭션에 참여, 없으면 새로 시작.
 - `REQUIRES_NEW`: 항상 새 트랜잭션 시작.
@@ -152,7 +153,7 @@ public void myMethod() throws IOException {
 - `NEVER`: 트랜잭션이 있으면 예외 발생.
 - `MANDATORY`: 트랜잭션이 반드시 있어야 함.
 
-**예시**:
+**예시**
 ```java
 @Transactional(propagation = Propagation.NEVER)
 public void myMethod() {
@@ -166,7 +167,7 @@ public void myMethod() {
 
 `@Transactional`이 붙은 클래스가 Spring 빈으로 등록되지 않으면 프록시가 생성되지 않습니다.
 
-**예시**:
+**예시**
 ```java
 public class MyService { // @Service 누락
     @Transactional
@@ -176,7 +177,7 @@ public class MyService { // @Service 누락
 }
 ```
 
-**해결법**:
+**해결법**
 
 - `@Component`, `@Service`, `@Repository` 등으로 빈 등록.
 - `@EnableTransactionManagement`를 `@Configuration` 클래스에 추가.
@@ -186,7 +187,7 @@ public class MyService { // @Service 누락
 - **문제**: 클래스와 메서드에 `@Transactional`이 모두 있으면 **메서드 설정**이 우선 적용됩니다.
 - **문제**: `readOnly=true`로 설정된 트랜잭션에서 데이터 변경(INSERT, UPDATE, DELETE)을 시도하면 예외가 발생하거나 변경이 반영되지 않습니다.
 
-**예시**:
+**예시**
 ```java
 @Transactional(readOnly = true)
 public class MyService {
@@ -196,7 +197,7 @@ public class MyService {
 }
 ```
 
-**해결법**:
+**해결법**
 
 - 데이터 변경이 필요한 메서드는 `readOnly=false` (기본값)으로 설정.
 - 클래스와 메서드 간 `@Transactional` 설정 충돌을 점검.
@@ -209,7 +210,7 @@ public class MyService {
 
 트랜잭션은 **스레드 로컬**에 저장되므로 다른 스레드에서 실행된 로직은 같은 트랜잭션에 참여하지 않습니다.
 
-**해결법**:
+**해결법**
 
 - `@Async` 호출에서 트랜잭션이 필요하면 대상 메서드에 `@Transactional` 추가.
 - 스레드 풀 설정을 확인해 트랜잭션 전파가 올바르게 작동하도록 조정.
@@ -218,7 +219,7 @@ public class MyService {
 
 인터페이스가 없는 클래스에 `@Transactional`을 적용하면 **CGLIB 프록시**가 사용됩니다. 설정 문제로 프록시 생성이 실패할 수 있습니다.
 
-**해결법**:
+**해결법**
 
 - 인터페이스를 정의하거나 CGLIB 프록시를 명시적으로 활성화.
 - Spring Boot에서는 기본적으로 CGLIB 프록시가 사용됩니다.
@@ -229,13 +230,13 @@ public class MyService {
 
 ### 로그 확인
 
-- **SQL 로그**:
+- **SQL 로그**
 ```properties
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
   
-- **트랜잭션 로그**:
+- **트랜잭션 로그**
 ```properties
 logging.level.org.springframework.transaction=DEBUG
 ```
@@ -245,7 +246,7 @@ logging.level.org.springframework.transaction=DEBUG
 `AopUtils.isAopProxy(bean)` 또는 `bean.getClass()`로 프록시 객체 여부 확인.
 
 ### 트랜잭션 상태 점검
-`TransactionSynchronizationManager`로 트랜잭션 상태 확인:
+`TransactionSynchronizationManager`로 트랜잭션 상태 확인
 
 ```java
 import org.springframework.transaction.support.TransactionSynchronizationManager;
