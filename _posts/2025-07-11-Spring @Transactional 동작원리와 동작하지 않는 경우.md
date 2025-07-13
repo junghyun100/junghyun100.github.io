@@ -2,7 +2,7 @@
 layout: post
 title: "Spring의 @Transactional 동작 원리와 동작 하지 않는 경우 문제 해결"
 date: 2025-07-11
-tags: [JAVA]
+tags: [Spring]
 comments: true
 ---
 
