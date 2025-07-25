@@ -14,11 +14,11 @@ comments: true
 
 ## 가정
 
-환경은 다음과 같이 가정합니다:
+환경은 다음과 같이 가정합니다.
 
 ### 예시 코드: Enum과 @Cacheable
 
-다음은 캐시 설정을 위한 Enum입니다:
+다음은 캐시 설정을 위한 Enum입니다.
 
 ```java
 public enum CacheType {
@@ -78,7 +78,7 @@ Java 어노테이션은 클래스 로딩 시 Metaspace 영역에 메타데이터
 
 `CacheType.A_1M.getCacheName()` 같은 메서드 호출은 런타임에 평가되므로 컴파일 타임 상수가 아닙니다. 
 
-컴파일러가 값을 미리 알 수 없으니 에러가 발생하는 겁니다.
+컴파일러가 값을 미리 알 수 없으니 에러가 발생합니다.
 
 > The value for an annotation must be a compile-time constant.
 
